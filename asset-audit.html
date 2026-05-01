@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IDH Asset Audit | Abdelhamid Ramadan</title>
+  <link rel="icon" type="image/png" href="images/profile.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+  <nav class="top-nav scrolled" id="topNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        Abdelhamid Ramadan <span class="nav-logo-role">Android Developer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="blog.html"     class="nav-link">Blog</a>
+        <a href="gear.html"     class="nav-link">Gear</a>
+        <a href="about.html"    class="nav-link">About</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    class="mobile-link">Home</a>
+    <a href="projects.html" class="mobile-link">Projects</a>
+    <a href="blog.html"     class="mobile-link">Blog</a>
+    <a href="gear.html"     class="mobile-link">Gear</a>
+    <a href="about.html"    class="mobile-link">About</a>
+  </div>
+
+  <main class="sp-main">
+    <div class="section-container">
+
+      <a href="projects.html" class="sp-back">
+        <i class="fas fa-arrow-left"></i> All Projects
+      </a>
+
+      <div class="sp-hero">
+        <div class="sp-icon" style="background:#7a1020; border-color:rgba(220,38,38,0.25); overflow:hidden; padding:0; display:flex; align-items:center; justify-content:center;">
+          <img src="images/IDH-AssetAuditLogo.png" alt="IDH Asset Audit Logo" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="sp-hero-text">
+          <span class="card-badge" style="margin-bottom:.75rem; display:inline-block;">
+            Flutter
+          </span>
+          <h1 class="sp-title">Asset Audit</h1>
+          <p class="sp-subtitle">
+           Asset Audit System is a Flutter app designed for large enterprises managing distributed inventory across hundreds of locations. It enables branch leaders to systematically scan assets, automatically detect duplicates and data quality issues, and maintain a unified inventory database — all while working offline in the field.
+          </p>
+        </div>
+      </div>
+
+      <div class="sp-gallery-wrap">
+        <div class="sp-gallery" style="display:flex; gap:1.25rem; justify-content:center; flex-wrap:wrap; align-items:flex-start; padding:1rem 0;">
+
+          <!-- ===== SCREEN 1: Asset Scanner ===== -->
+          <svg width="220" height="440" viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" style="border-radius:22px; flex-shrink:0; display:block;">
+            <!-- Phone body -->
+            <rect width="220" height="440" rx="22" fill="#181818"/>
+            <!-- 3-dot menu -->
+            <text x="204" y="22" font-family="Arial" font-size="15" fill="#777" text-anchor="middle">⋮</text>
+            <!-- "Asset Scanner" header pill -->
+            <rect x="10" y="30" width="200" height="42" rx="21" fill="#111" stroke="#2a2a2a" stroke-width="1"/>
+            <text x="110" y="56" font-family="Arial" font-weight="bold" font-size="14" fill="white" text-anchor="middle">Asset Scanner</text>
+            <!-- Camera viewfinder -->
+            <rect x="10" y="84" width="200" height="188" rx="6" fill="#000"/>
+            <!-- Scan line (red) -->
+            <rect x="10" y="176" width="200" height="2" rx="1" fill="#cc0000" opacity="0.75"/>
+            <!-- Corner brackets on viewfinder -->
+            <rect x="20" y="94" width="20" height="3" rx="1.5" fill="#cc0000" opacity="0.6"/>
+            <rect x="20" y="94" width="3" height="20" rx="1.5" fill="#cc0000" opacity="0.6"/>
+            <rect x="180" y="94" width="20" height="3" rx="1.5" fill="#cc0000" opacity="0.6"/>
+            <rect x="197" y="94" width="3" height="20" rx="1.5" fill="#cc0000" opacity="0.6"/>
+            <rect x="20" y="260" width="20" height="3" rx="1.5" fill="#cc0000" opacity="0.6"/>
+            <rect x="20" y="243" width="3" height="20" rx="1.5" fill="#cc0000" opacity="0.6"/>
+            <rect x="180" y="260" width="20" height="3" rx="1.5" fill="#cc0000" opacity="0.6"/>
+            <rect x="197" y="243" width="3" height="20" rx="1.5" fill="#cc0000" opacity="0.6"/>
+            <!-- Bottom light panel -->
+            <rect x="0" y="280" width="220" height="160" fill="#f0f0f0"/>
+            <rect x="0" y="272" width="220" height="16" rx="0" fill="#f0f0f0"/>
+            <!-- Document icon -->
+            <rect x="18" y="284" width="20" height="25" rx="2" fill="none" stroke="#666" stroke-width="1.5"/>
+            <line x1="22" y1="292" x2="34" y2="292" stroke="#666" stroke-width="1"/>
+            <line x1="22" y1="298" x2="34" y2="298" stroke="#666" stroke-width="1"/>
+            <line x1="22" y1="304" x2="30" y2="304" stroke="#666" stroke-width="1"/>
+            <!-- Location pin icon -->
+            <circle cx="56" cy="289" r="7" fill="none" stroke="#666" stroke-width="1.5"/>
+            <circle cx="56" cy="289" r="2.5" fill="#666"/>
+            <line x1="56" y1="296" x2="56" y2="306" stroke="#666" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- "Oct Inventory Report" text -->
+            <text x="110" y="316" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct Inventory Report</text>
+            <!-- Manual button -->
+            <rect x="10" y="328" width="94" height="34" rx="7" fill="#cc0000"/>
+            <text x="57" y="350" font-family="Arial" font-weight="bold" font-size="13" fill="white" text-anchor="middle">Manual</text>
+            <!-- Capture button -->
+            <rect x="116" y="328" width="94" height="34" rx="7" fill="#cc0000"/>
+            <text x="163" y="350" font-family="Arial" font-weight="bold" font-size="13" fill="white" text-anchor="middle">Capture</text>
+            <!-- Confirm button -->
+            <rect x="10" y="372" width="94" height="34" rx="7" fill="#cc0000"/>
+            <text x="57" y="394" font-family="Arial" font-weight="bold" font-size="13" fill="white" text-anchor="middle">Confirm</text>
+            <!-- UnScanned button -->
+            <rect x="116" y="372" width="94" height="34" rx="7" fill="#cc0000"/>
+            <text x="163" y="394" font-family="Arial" font-weight="bold" font-size="13" fill="white" text-anchor="middle">UnScanned</text>
+          </svg>
+
+          <!-- ===== SCREEN 2: Splash Screen ===== -->
+          <svg width="220" height="440" viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" style="border-radius:22px; flex-shrink:0; display:block;">
+            <defs>
+              <linearGradient id="splashBg" x1="0" y1="0" x2="0.6" y2="1">
+                <stop offset="0" stop-color="#c2cdd6"/>
+                <stop offset="1" stop-color="#dde6ed"/>
+              </linearGradient>
+              <linearGradient id="bldLeft" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#8fa3af"/>
+                <stop offset="1" stop-color="#c0d0d8"/>
+              </linearGradient>
+              <linearGradient id="bldRight" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#7c96a4"/>
+                <stop offset="1" stop-color="#a8bcc8"/>
+              </linearGradient>
+            </defs>
+            <!-- Background sky -->
+            <rect width="220" height="440" rx="22" fill="url(#splashBg)"/>
+            <!-- Left glass building -->
+            <rect x="0" y="0" width="118" height="280" fill="url(#bldLeft)" opacity="0.75"/>
+            <line x1="0"   y1="40"  x2="118" y2="40"  stroke="#688090" stroke-width="0.6" opacity="0.6"/>
+            <line x1="0"   y1="80"  x2="118" y2="80"  stroke="#688090" stroke-width="0.6" opacity="0.6"/>
+            <line x1="0"   y1="120" x2="118" y2="120" stroke="#688090" stroke-width="0.6" opacity="0.6"/>
+            <line x1="0"   y1="160" x2="118" y2="160" stroke="#688090" stroke-width="0.6" opacity="0.6"/>
+            <line x1="0"   y1="200" x2="118" y2="200" stroke="#688090" stroke-width="0.6" opacity="0.6"/>
+            <line x1="0"   y1="240" x2="118" y2="240" stroke="#688090" stroke-width="0.6" opacity="0.6"/>
+            <line x1="24"  y1="0"   x2="24"  y2="280" stroke="#688090" stroke-width="0.6" opacity="0.6"/>
+            <line x1="48"  y1="0"   x2="48"  y2="280" stroke="#688090" stroke-width="0.6" opacity="0.6"/>
+            <line x1="72"  y1="0"   x2="72"  y2="280" stroke="#688090" stroke-width="0.6" opacity="0.6"/>
+            <line x1="96"  y1="0"   x2="96"  y2="280" stroke="#688090" stroke-width="0.6" opacity="0.6"/>
+            <!-- Right glass building (perspective) -->
+            <polygon points="118,0 220,50 220,260 118,280" fill="url(#bldRight)" opacity="0.65"/>
+            <line x1="118" y1="46"  x2="220" y2="90"  stroke="#608090" stroke-width="0.6" opacity="0.55"/>
+            <line x1="118" y1="93"  x2="220" y2="130" stroke="#608090" stroke-width="0.6" opacity="0.55"/>
+            <line x1="118" y1="140" x2="220" y2="170" stroke="#608090" stroke-width="0.6" opacity="0.55"/>
+            <line x1="118" y1="186" x2="220" y2="210" stroke="#608090" stroke-width="0.6" opacity="0.55"/>
+            <line x1="118" y1="233" x2="220" y2="250" stroke="#608090" stroke-width="0.6" opacity="0.55"/>
+            <!-- Fade at bottom of building -->
+            <rect x="0" y="200" width="220" height="80" fill="url(#splashBg)" opacity="0.55"/>
+            <!-- 3-dot menu -->
+            <text x="204" y="22" font-family="Arial" font-size="15" fill="#777" text-anchor="middle">⋮</text>
+            <!-- IDH Logo -->
+            <rect x="24" y="248" width="92" height="64" fill="#cc0000"/>
+            <text x="70" y="292" font-family="Arial Black, Arial" font-weight="900" font-size="34" fill="white" text-anchor="middle">IDH</text>
+            <!-- Separator -->
+            <line x1="122" y1="252" x2="122" y2="308" stroke="#555" stroke-width="1.5"/>
+            <!-- Company name -->
+            <text x="130" y="266" font-family="Arial" font-weight="bold" font-size="8.5" fill="#333" letter-spacing="0.8">INTEGRATED</text>
+            <text x="130" y="281" font-family="Arial" font-weight="bold" font-size="8.5" fill="#333" letter-spacing="0.8">DIAGNOSTICS</text>
+            <text x="130" y="296" font-family="Arial" font-weight="bold" font-size="8.5" fill="#333" letter-spacing="0.8">HOLDINGS</text>
+            <!-- Version Number button -->
+            <rect x="62" y="376" width="96" height="32" rx="4" fill="none" stroke="#cc0000" stroke-width="1.5"/>
+            <text x="110" y="397" font-family="Arial" font-size="11" fill="#333" text-anchor="middle">Version Number</text>
+          </svg>
+
+          <!-- ===== SCREEN 3: Login Screen ===== -->
+          <svg width="220" height="440" viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" style="border-radius:22px; flex-shrink:0; display:block;">
+            <!-- Light grey background -->
+            <rect width="220" height="440" rx="22" fill="#e6e6e6"/>
+            <!-- Dark status bar -->
+            <rect x="0" y="0" width="220" height="34" rx="22" fill="#1a1a1a"/>
+            <rect x="0" y="17" width="220" height="17" fill="#1a1a1a"/>
+            <text x="204" y="23" font-family="Arial" font-size="15" fill="#777" text-anchor="middle">⋮</text>
+            <!-- White main card -->
+            <rect x="14" y="58" width="192" height="346" rx="14" fill="white"/>
+            <!-- IDH icon (white rounded square + red inner) -->
+            <rect x="74" y="74" width="72" height="72" rx="18" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+            <rect x="83" y="83" width="54" height="54" rx="11" fill="#cc0000"/>
+            <text x="110" y="121" font-family="Arial Black, Arial" font-weight="900" font-size="21" fill="white" text-anchor="middle">IDH</text>
+            <!-- Title -->
+            <text x="110" y="168" font-family="Arial" font-weight="bold" font-size="14" fill="#111" text-anchor="middle">Fixed Asset Inventory</text>
+            <!-- Username field -->
+            <rect x="26" y="184" width="168" height="46" rx="8" fill="white" stroke="#ddd" stroke-width="1.5"/>
+            <text x="38" y="204" font-family="Arial" font-size="11" fill="#bbb">Type your username</text>
+            <text x="38" y="220" font-family="Arial" font-size="9.5" fill="#ccc">Example: User12345</text>
+            <!-- Password field -->
+            <rect x="26" y="240" width="168" height="46" rx="8" fill="white" stroke="#ddd" stroke-width="1.5"/>
+            <text x="38" y="260" font-family="Arial" font-size="11" fill="#bbb">Type your password</text>
+            <text x="38" y="276" font-family="Arial" font-size="9.5" fill="#ccc">Example: 12345</text>
+            <!-- Eye icon -->
+            <ellipse cx="184" cy="263" rx="8" ry="5.5" fill="none" stroke="#bbb" stroke-width="1.5"/>
+            <circle cx="184" cy="263" r="2.5" fill="#bbb"/>
+            <!-- Forget Password link -->
+            <text x="190" y="302" font-family="Arial" font-size="10.5" fill="#cc0000" text-anchor="end">Forget Password ?</text>
+            <!-- LOGIN button -->
+            <rect x="26" y="316" width="168" height="44" rx="8" fill="#cc0000"/>
+            <text x="110" y="343" font-family="Arial" font-weight="bold" font-size="14" fill="white" text-anchor="middle">LOGIN</text>
+          </svg>
+
+          <!-- ===== SCREEN 4: Branch Items List (with demo data) ===== -->
+          <svg width="220" height="440" viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" style="border-radius:22px; flex-shrink:0; display:block;">
+            <rect width="220" height="440" rx="22" fill="#181818"/>
+            <!-- 3-dot menu -->
+            <text x="204" y="22" font-family="Arial" font-size="15" fill="#777" text-anchor="middle">⋮</text>
+            <!-- "Branch Items List" header -->
+            <rect x="10" y="30" width="200" height="42" rx="21" fill="#111" stroke="#2a2a2a" stroke-width="1"/>
+            <text x="110" y="56" font-family="Arial" font-weight="bold" font-size="13" fill="white" text-anchor="middle">Branch Items List</text>
+            <!-- White card -->
+            <rect x="10" y="84" width="200" height="312" rx="12" fill="white"/>
+            <!-- unScanned tab header -->
+            <rect x="10" y="84" width="200" height="38" rx="12" fill="#f2f2f2"/>
+            <rect x="10" y="102" width="200" height="20" fill="#f2f2f2"/>
+            <text x="110" y="108" font-family="Arial" font-size="12" fill="#444" text-anchor="middle">unScanned</text>
+            <!-- List item 1 -->
+            <rect x="18" y="130" width="184" height="46" rx="7" fill="#fafafa" stroke="#ececec" stroke-width="1"/>
+            <circle cx="36" cy="153" r="9" fill="none" stroke="#cc0000" stroke-width="1.8"/>
+            <text x="52" y="147" font-family="Arial" font-weight="bold" font-size="10.5" fill="#222">Laptop Dell XPS 15</text>
+            <text x="52" y="161" font-family="Arial" font-size="9" fill="#aaa">IDH-CAI-2024-00471</text>
+            <!-- List item 2 -->
+            <rect x="18" y="182" width="184" height="46" rx="7" fill="#fafafa" stroke="#ececec" stroke-width="1"/>
+            <circle cx="36" cy="205" r="9" fill="none" stroke="#cc0000" stroke-width="1.8"/>
+            <text x="52" y="199" font-family="Arial" font-weight="bold" font-size="10.5" fill="#222">HP Monitor 24"</text>
+            <text x="52" y="213" font-family="Arial" font-size="9" fill="#aaa">IDH-CAI-2024-00892</text>
+            <!-- List item 3 -->
+            <rect x="18" y="234" width="184" height="46" rx="7" fill="#fafafa" stroke="#ececec" stroke-width="1"/>
+            <circle cx="36" cy="257" r="9" fill="none" stroke="#cc0000" stroke-width="1.8"/>
+            <text x="52" y="251" font-family="Arial" font-weight="bold" font-size="10.5" fill="#222">Keyboard Logitech MX</text>
+            <text x="52" y="265" font-family="Arial" font-size="9" fill="#aaa">IDH-CAI-2024-01103</text>
+            <!-- List item 4 -->
+            <rect x="18" y="286" width="184" height="46" rx="7" fill="#fafafa" stroke="#ececec" stroke-width="1"/>
+            <circle cx="36" cy="309" r="9" fill="none" stroke="#cc0000" stroke-width="1.8"/>
+            <text x="52" y="303" font-family="Arial" font-weight="bold" font-size="10.5" fill="#222">Office Chair Ergonomic</text>
+            <text x="52" y="317" font-family="Arial" font-size="9" fill="#aaa">IDH-CAI-2024-01204</text>
+            <!-- List item 5 -->
+            <rect x="18" y="338" width="184" height="46" rx="7" fill="#fafafa" stroke="#ececec" stroke-width="1"/>
+            <circle cx="36" cy="361" r="9" fill="none" stroke="#cc0000" stroke-width="1.8"/>
+            <text x="52" y="355" font-family="Arial" font-weight="bold" font-size="10.5" fill="#222">Printer HP LaserJet</text>
+            <text x="52" y="369" font-family="Arial" font-size="9" fill="#aaa">IDH-CAI-2024-01305</text>
+            <!-- Submit button -->
+            <rect x="10" y="406" width="200" height="36" rx="18" fill="#cc0000"/>
+            <text x="110" y="429" font-family="Arial" font-weight="bold" font-size="13" fill="white" text-anchor="middle">Submit</text>
+          </svg>
+
+          <!-- ===== SCREEN 5: Date / Location (Arabic UI) ===== -->
+          <svg width="220" height="440" viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" style="border-radius:22px; flex-shrink:0; display:block;">
+            <rect width="220" height="440" rx="22" fill="#181818"/>
+            <!-- Status bar -->
+            <rect x="0" y="0" width="220" height="34" rx="22" fill="#181818"/>
+            <text x="204" y="22" font-family="Arial" font-size="15" fill="#777" text-anchor="middle">⋮</text>
+            <!-- Light content area -->
+            <rect x="0" y="34" width="220" height="406" fill="#f0f0f0"/>
+            <rect x="0" y="34" width="220" height="12" rx="0" fill="#f0f0f0"/>
+            <!-- Right col: Gregorian date -->
+            <text x="208" y="58" font-family="Arial" font-size="9.5" fill="#888" text-anchor="end">&#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; 12 &#x62F;&#x64A;&#x633;&#x645;&#x628;&#x631; 2023</text>
+            <!-- Left col: location label -->
+            <text x="14" y="58" font-family="Arial" font-size="9" fill="#bbb">&#x645;&#x643;&#x627;&#x646;</text>
+            <!-- Right col: Islamic date -->
+            <text x="208" y="74" font-family="Arial" font-size="9.5" fill="#666" text-anchor="end">&#x627;&#x644;&#x623;&#x62D;&#x62F; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x623;&#x648;&#x644; &#x061C;&#x0661;&#x0664;&#x0664;&#x0665;</text>
+            <!-- Left col: location value -->
+            <text x="14" y="74" font-family="Arial" font-size="12" fill="#222">&#x627;&#x644;&#x642;&#x627;&#x647;&#x631;&#x629;&#x60C; &#x645;&#x635;&#x631;</text>
+            <!-- Divider -->
+            <line x1="10" y1="84" x2="210" y2="84" stroke="#ddd" stroke-width="1"/>
+            <!-- White list card -->
+            <rect x="10" y="92" width="200" height="322" rx="10" fill="white"/>
+            <!-- List header row -->
+            <rect x="10" y="92" width="200" height="34" rx="10" fill="#f7f7f7"/>
+            <rect x="10" y="110" width="200" height="16" fill="#f7f7f7"/>
+            <line x1="10" y1="126" x2="210" y2="126" stroke="#eee" stroke-width="1"/>
+            <text x="110" y="113" font-family="Arial" font-size="9" fill="#888" text-anchor="middle">&#x627;&#x633;&#x645; &#x627;&#x644;&#x623;&#x635;&#x644; &#x2014; &#x627;&#x644;&#x631;&#x642;&#x645; &#x627;&#x644;&#x62A;&#x633;&#x644;&#x633;&#x644;&#x64A;</text>
+            <!-- Row 1 -->
+            <line x1="10" y1="166" x2="210" y2="166" stroke="#eee" stroke-width="1"/>
+            <text x="204" y="143" font-family="Arial" font-size="10" fill="#222" text-anchor="end">&#x644;&#x627;&#x628;&#x62A;&#x648;&#x628; &#x62F;&#x64A;&#x644; XPS</text>
+            <text x="204" y="158" font-family="Arial" font-size="8.5" fill="#aaa" text-anchor="end">IDH-CAI-2024-00471</text>
+            <circle cx="24" cy="148" r="8" fill="none" stroke="#cc0000" stroke-width="1.6"/>
+            <!-- Row 2 -->
+            <line x1="10" y1="206" x2="210" y2="206" stroke="#eee" stroke-width="1"/>
+            <text x="204" y="183" font-family="Arial" font-size="10" fill="#222" text-anchor="end">&#x634;&#x627;&#x634;&#x629; HP 24 &#x628;&#x648;&#x635;&#x629;</text>
+            <text x="204" y="198" font-family="Arial" font-size="8.5" fill="#aaa" text-anchor="end">IDH-CAI-2024-00892</text>
+            <circle cx="24" cy="188" r="8" fill="none" stroke="#cc0000" stroke-width="1.6"/>
+            <!-- Row 3 -->
+            <line x1="10" y1="246" x2="210" y2="246" stroke="#eee" stroke-width="1"/>
+            <text x="204" y="223" font-family="Arial" font-size="10" fill="#222" text-anchor="end">&#x643;&#x64A;&#x628;&#x648;&#x631;&#x62F; Logitech MX</text>
+            <text x="204" y="238" font-family="Arial" font-size="8.5" fill="#aaa" text-anchor="end">IDH-CAI-2024-01103</text>
+            <circle cx="24" cy="228" r="8" fill="none" stroke="#cc0000" stroke-width="1.6"/>
+            <!-- Row 4 -->
+            <line x1="10" y1="286" x2="210" y2="286" stroke="#eee" stroke-width="1"/>
+            <text x="204" y="263" font-family="Arial" font-size="10" fill="#222" text-anchor="end">&#x643;&#x631;&#x633;&#x64A; &#x645;&#x643;&#x62A;&#x628;&#x64A;</text>
+            <text x="204" y="278" font-family="Arial" font-size="8.5" fill="#aaa" text-anchor="end">IDH-CAI-2024-01204</text>
+            <circle cx="24" cy="268" r="8" fill="none" stroke="#cc0000" stroke-width="1.6"/>
+            <!-- Row 5 -->
+            <line x1="10" y1="326" x2="210" y2="326" stroke="#eee" stroke-width="1"/>
+            <text x="204" y="303" font-family="Arial" font-size="10" fill="#222" text-anchor="end">&#x637;&#x627;&#x628;&#x639;&#x629; HP LaserJet</text>
+            <text x="204" y="318" font-family="Arial" font-size="8.5" fill="#aaa" text-anchor="end">IDH-CAI-2024-01305</text>
+            <circle cx="24" cy="308" r="8" fill="none" stroke="#cc0000" stroke-width="1.6"/>
+          </svg>
+
+        </div>
+      </div>
+
+      <div class="sp-body">
+
+        <section class="sp-section">
+          <h2 class="sp-section-title">Introduction</h2>
+          <p>
+            Large enterprises managing 600+ distributed branches face a critical gap: no unified system to track,
+            validate, and reconcile physical assets across locations. Duplicate entries, manual spreadsheets, and
+            disconnected workflows lead to financial inaccuracies that take weeks — sometimes months — to untangle.
+          </p>
+          <p style="margin-top:1rem;">
+            Asset Audit brings systematic scanning, intelligent deduplication, and real-time data quality assurance
+            to mobile. Built for field teams at IDH Corp in Egypt, the app lets branch leaders audit inventory on
+            the spot, flag duplicates automatically, and submit validated records —
+            <strong style="color:var(--white);">all without an internet connection.</strong>
+          </p>
+          <p style="margin-top:1rem;">
+            The app is built with <strong style="color:var(--white);">Flutter</strong> using an offline-first
+            architecture. Local caching ensures full functionality in the field, while a smart sync engine handles
+            conflict resolution when connectivity is restored.
+            <strong style="color:var(--white);">Fuzzy matching (Levenshtein distance)</strong> powers the duplicate
+            detection engine, catching near-identical serial numbers and asset descriptions across branches.
+          </p>
+        </section>
+
+        <section class="sp-section">
+          <h2 class="sp-section-title">Contributions</h2>
+          <ul class="sp-list">
+            <li>Integrated <strong style="color:var(--white);">barcode scanning</strong> via mobile_scanner, enabling real-time camera-based asset lookup and inventory entry without manual input.</li>
+            <li>Built a <strong style="color:var(--white);">duplicate detection engine</strong> using fuzzy matching (Levenshtein distance) to cross-check asset serial numbers and descriptions across all branches, surfacing likely duplicates before they corrupt the dataset.</li>
+            <li>Implemented <strong style="color:var(--white);">branch authentication &amp; role-based access</strong> so branch leaders see only their location's data while admins retain cross-branch visibility.</li>
+            <li>Created a <strong style="color:var(--white);">data quality validation layer</strong> that checks required fields, format constraints, and logical consistency before any record is committed or synced.</li>
+            <li>Designed an <strong style="color:var(--white);">offline-first sync layer</strong> with Hive local caching so the app functions fully without connectivity, then intelligently merges changes and resolves conflicts on reconnect.</li>
+            <li>Built an <strong style="color:var(--white);">audit trail logging</strong> system that records every scan, edit, and sync event with timestamps and user identity for full traceability.</li>
+            <li>Designed and implemented the entire <strong style="color:var(--white);">field-facing UI/UX</strong> in Flutter — scan flows, duplicate review screens, and sync status indicators — optimised for non-technical branch leaders.</li>
+          </ul>
+        </section>
+
+        <section class="sp-section">
+          <h2 class="sp-section-title">Key Highlights</h2>
+          <div class="sp-highlights">
+            <div class="sp-highlight-card">
+              <i class="fas fa-barcode"></i>
+              <p class="sp-highlight-title">Barcode Scanning</p>
+              <p class="sp-highlight-desc">Real-time camera detection enables instant asset lookup and inventory entry across all branches.</p>
+            </div>
+            <div class="sp-highlight-card">
+              <i class="fas fa-copy"></i>
+              <p class="sp-highlight-title">Duplicate Detection</p>
+              <p class="sp-highlight-desc">Fuzzy matching (Levenshtein distance) catches near-identical asset records across 600+ locations automatically.</p>
+            </div>
+            <div class="sp-highlight-card">
+              <i class="fas fa-wifi"></i>
+              <p class="sp-highlight-title">Offline-First Sync</p>
+              <p class="sp-highlight-desc">Local Hive cache keeps the app fully functional in the field; a smart engine resolves conflicts on reconnect.</p>
+            </div>
+            <div class="sp-highlight-card">
+              <i class="fas fa-shield-alt"></i>
+              <p class="sp-highlight-title">Data Quality Validation</p>
+              <p class="sp-highlight-desc">Validation rules catch malformed or incomplete records before they ever reach the central database.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="sp-section">
+          <h2 class="sp-section-title">Technologies Used</h2>
+          <table class="tech-table">
+            <thead>
+              <tr><th>Tool / Library</th><th>Used for</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Dart</td><td>Primary language</td></tr>
+              <tr><td>Flutter</td><td>Cross-platform mobile framework</td></tr>
+              <tr><td>BLoC</td><td>State management across audit and sync flows</td></tr>
+              <tr><td>Hive</td><td>Local database / offline-first asset caching</td></tr>
+              <tr><td>Dio</td><td>REST API communication for branch sync</td></tr>
+              <tr><td>mobile_scanner</td><td>Real-time barcode scanning via device camera</td></tr>
+              <tr><td>fuzzy / Levenshtein</td><td>Duplicate detection across asset serial numbers</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span class="footer-logo">Abdelhamid Ramadan</span>
+      <p class="footer-text">© 2025 Abdelhamid Ramadan. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+    document.querySelectorAll('.mobile-link').forEach(l =>
+      l.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggle.classList.remove('active');
+      })
+    );
+  </script>
+</body>
+</html>

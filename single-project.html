@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alborg Labs &amp; Scans | Abdelhamid Ramadan</title>
+  <link rel="icon" type="image/png" href="images/profile.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="top-nav scrolled" id="topNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        Abdelhamid Ramadan <span class="nav-logo-role">Android Developer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="blog.html"     class="nav-link">Blog</a>
+        <a href="gear.html"     class="nav-link">Gear</a>
+        <a href="about.html"    class="nav-link">About</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    class="mobile-link">Home</a>
+    <a href="projects.html" class="mobile-link">Projects</a>
+    <a href="blog.html"     class="mobile-link">Blog</a>
+    <a href="gear.html"     class="mobile-link">Gear</a>
+    <a href="about.html"    class="mobile-link">About</a>
+  </div>
+
+  <main class="sp-main">
+    <div class="section-container">
+
+      <!-- Back link -->
+      <a href="projects.html" class="sp-back">
+        <i class="fas fa-arrow-left"></i> All Projects
+      </a>
+
+      <!-- Project Hero -->
+      <div class="sp-hero">
+        <div class="sp-icon" style="background:#F5B800;border-radius:1.25rem;width:80px;height:80px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;position:relative;">
+          <!-- Alborg logo: dots pattern -->
+          <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" fill="#F5B800" rx="18"/>
+            <!-- Text: alborg -->
+            <text x="10" y="38" font-family="Arial Black, Arial" font-weight="900" font-size="18" fill="#111" letter-spacing="-0.5">alborg</text>
+            <!-- Text: labs & scans -->
+            <text x="10" y="54" font-family="Arial, sans-serif" font-weight="700" font-size="10" fill="#111" letter-spacing="0.2">labs &amp; scans</text>
+            <!-- Dots pattern (top-right) -->
+            <circle cx="64" cy="14" r="4.5" fill="#111"/>
+            <circle cx="72" cy="20" r="3.5" fill="#111"/>
+            <circle cx="68" cy="8"  r="2.5" fill="#111"/>
+            <circle cx="76" cy="13" r="2"   fill="#111"/>
+            <circle cx="60" cy="22" r="3"   fill="#111"/>
+            <circle cx="72" cy="30" r="4"   fill="#111"/>
+            <circle cx="64" cy="34" r="2.5" fill="#111"/>
+            <circle cx="76" cy="40" r="3"   fill="#111"/>
+            <circle cx="68" cy="46" r="4"   fill="#111"/>
+            <circle cx="60" cy="52" r="2"   fill="#111"/>
+            <circle cx="72" cy="56" r="3.5" fill="#111"/>
+          </svg>
+        </div>
+        <div class="sp-hero-text">
+          <span class="card-badge" style="margin-bottom:.75rem;display:inline-block;">ANDROID</span>
+          <h1 class="sp-title">Alborg Labs &amp; Scans</h1>
+          <p class="sp-subtitle">
+            A short one-liner describing what this project does. Replace this with your real description.
+          </p>
+          <div class="sp-links">
+            <a href="#" class="social-pill" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> GITHUB
+            </a>
+            <a href="#" class="social-pill" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i> LIVE DEMO
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screenshot Gallery -->
+      <div class="sp-gallery-wrap">
+        <div class="sp-gallery">
+          <img src="images/port-item1.jpg" alt="Screenshot 1" class="sp-screenshot">
+          <img src="images/port-item2.jpg" alt="Screenshot 2" class="sp-screenshot">
+          <img src="images/port-item3.jpg" alt="Screenshot 3" class="sp-screenshot">
+          <img src="images/port-item4.jpg" alt="Screenshot 4" class="sp-screenshot">
+          <img src="images/port-large-item1.jpg" alt="Screenshot 5" class="sp-screenshot">
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="sp-body">
+
+        <section class="sp-section">
+          <h2 class="sp-section-title">Introduction</h2>
+          <p>
+            Replace this with a full description of your project. Explain what problem it solves,
+            who it's for, and what makes it interesting or unique. You can add multiple paragraphs here.
+          </p>
+          <p style="margin-top:1rem;">
+            Add any additional context, motivation, or background about the project. Describe the
+            challenges you faced and how you solved them.
+          </p>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="sp-section">
+          <h2 class="sp-section-title">Technologies Used</h2>
+          <table class="tech-table">
+            <thead>
+              <tr>
+                <th>Tool / Library</th>
+                <th>Used for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kotlin / Java</td>
+                <td>Primary programming language</td>
+              </tr>
+              <tr>
+                <td>Flutter</td>
+                <td>Cross-platform UI framework</td>
+              </tr>
+              <tr>
+                <td>Retrofit</td>
+                <td>HTTP client for API calls</td>
+              </tr>
+              <tr>
+                <td>Room</td>
+                <td>Local database / offline caching</td>
+              </tr>
+              <tr>
+                <td>Hilt</td>
+                <td>Dependency injection</td>
+              </tr>
+              <tr>
+                <td>Jetpack Compose</td>
+                <td>Declarative UI components</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+      <!-- /sp-body -->
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span class="footer-logo">Abdelhamid Ramadan</span>
+      <p class="footer-text">© 2025 Abdelhamid Ramadan. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+    document.querySelectorAll('.mobile-link').forEach(l =>
+      l.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggle.classList.remove('active');
+      })
+    );
+  </script>
+</body>
+</html>

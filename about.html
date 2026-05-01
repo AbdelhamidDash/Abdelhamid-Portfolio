@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Abdelhamid Ramadan</title>
+  <link rel="icon" type="image/png" href="images/profile.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="top-nav scrolled" id="topNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        Abdelhamid Ramadan <span class="nav-logo-role">Android Developer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="blog.html"     class="nav-link">Blog</a>
+        <a href="gear.html"     class="nav-link">Gear</a>
+        <a href="about.html"    class="nav-link active">About</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    class="mobile-link">Home</a>
+    <a href="projects.html" class="mobile-link">Projects</a>
+    <a href="blog.html"     class="mobile-link">Blog</a>
+    <a href="gear.html"     class="mobile-link">Gear</a>
+    <a href="about.html"    class="mobile-link">About</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="about-page-hero">
+    <div class="about-page-container">
+      <img
+        src="images/profile.png"
+        alt="Abdelhamid Ramadan"
+        class="about-portrait"
+        data-aos="fade-up"
+      >
+      <div class="about-intro" data-aos="fade-up" data-aos-delay="100">
+        <div class="section-label">ABOUT ME</div>
+        <h1 class="about-page-name">Abdelhamid Ramadan</h1>
+        <p class="about-page-bio">
+          Android &amp; Flutter Developer building production-ready mobile apps, POS integrations, and cross-platform solutions.
+          I work primarily in Kotlin and Dart — shipping apps with clean architecture, offline-first data layers, and real-device hardware integrations.
+          I've also worked with .NET on backend-adjacent tasks.
+          Outside of client work I maintain open-source Android and Flutter libraries and write about what I learn.
+        </p>
+        <div class="about-page-socials">
+          <a href="https://github.com/AbdelhamidDash" class="social-pill" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/abdelhamidr/" class="social-pill" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+          <a href="https://mastodon.social/@AbdehamidDash" class="social-pill" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-mastodon"></i> Mastodon
+          </a>
+          <a href="https://abdelhamidr.hashnode.dev/" class="social-pill" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-pen-nib"></i> Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section">
+    <div class="section-container">
+      <div class="section-label" data-aos="fade-up">WORK</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Experience</h2>
+
+      <div class="about-exp-list">
+
+        <div class="about-exp-entry" data-aos="fade-up" data-aos-delay="100">
+          <div class="about-exp-meta">
+            <span class="about-exp-role">Android &amp; Flutter Software Engineer</span>
+            <span class="about-exp-divider">·</span>
+            <a href="https://www.idhcorp.com" class="about-exp-company" target="_blank" rel="noopener noreferrer">IDH — Integrated Diagnostics Holdings</a>
+            <span class="about-exp-divider">·</span>
+            <span class="about-exp-location">Smart Village, Giza, Egypt</span>
+            <span class="about-exp-divider">·</span>
+            <span class="about-exp-date">Jul 2024 — Present</span>
+          </div>
+          <ul class="about-exp-bullets">
+            <li>Built the <strong>IDH Chemist App</strong> in Android using <strong>product flavors</strong> — unified the Alborg and Almokhtabar lab codebases into a single project with per-flavor branding, configuration, and release pipelines, eliminating duplicate maintenance overhead.</li>
+            <li>Developed the <strong>IDH Asset Audit</strong> app in Flutter — an enterprise inventory tool used across 600+ branches, featuring barcode scanning, real-time data-quality auditing, duplicate detection, and a full <strong>offline-first sync</strong> layer backed by local storage and background workers.</li>
+            <li>Delivered <strong>PackTrack</strong>, a cross-platform Flutter logistics app enabling couriers to scan packages at pick-up and receivers to approve delivery, creating a verifiable chain of custody per shipment.</li>
+            <li>Implemented <strong>POS hardware integrations</strong> — serial communication with POS terminals, ESC/POS receipt printing, and end-to-end payment flow handling including failure recovery, timeout management, and edge-case transaction states.</li>
+            <li>Engineered a <strong>security layer</strong> across production apps — implemented <strong>root detection</strong> to block compromised devices, <strong>SSL pinning</strong> to prevent man-in-the-middle attacks, and certificate validation to harden all network communication.</li>
+            <li>Built and maintained a <strong>push notification</strong> system — handled delivery testing across device states (foreground, background, killed), verified payload integrity, and ensured reliable notification routing for appointment and lab result alerts.</li>
+            <li>Diagnosed and resolved critical <strong>payment handling issues</strong> — traced failures across the POS integration stack, fixed race conditions and timeout edge cases, and <strong>reduced crash rate by 80%</strong> through systematic root-cause analysis and defensive error handling.</li>
+            <li>Contributed to backend integration tasks using <strong>.NET</strong> APIs, coordinating with the backend team to define contracts and handle authentication flows.</li>
+            <li>Participated in Agile sprints, code reviews, and cross-functional planning, consistently delivering features on schedule and maintaining high code-quality standards.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section section-alt">
+    <div class="section-container">
+      <div class="section-label" data-aos="fade-up">STUDIES</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Education</h2>
+
+      <div class="about-exp-list">
+
+        <div class="about-exp-entry" data-aos="fade-up" data-aos-delay="100">
+          <div class="about-exp-meta">
+            <span class="about-exp-role">Bachelor's in Computer Science</span>
+            <span class="about-exp-divider">·</span>
+            <span class="about-exp-company">Modern Academy for Computer Science and Technology</span>
+            <span class="about-exp-divider">·</span>
+            <span class="about-exp-location">Cairo, Egypt</span>
+            <span class="about-exp-divider">·</span>
+            <span class="about-exp-date">2019 — 2023</span>
+          </div>
+          <ul class="about-exp-bullets">
+            <li>Developed a strong foundation in software development, object-oriented programming, data structures, algorithms, and databases, with a focus on mobile application development.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span class="footer-logo">Abdelhamid Ramadan</span>
+      <p class="footer-text">© 2025 Abdelhamid Ramadan. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/AbdelhamidDash" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/abdelhamidr/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://mastodon.social/@AbdehamidDash" class="social-link" aria-label="Mastodon" target="_blank" rel="noopener noreferrer"><i class="fab fa-mastodon"></i></a>
+        <a href="mailto:abdelhamydRamadan@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 750, once: true, offset: 80 });
+
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggle.classList.remove('active');
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('topNav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>

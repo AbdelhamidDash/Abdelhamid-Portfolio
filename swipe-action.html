@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SwipeAction | Abdelhamid Ramadan</title>
+  <link rel="icon" type="image/png" href="images/profile.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+  <nav class="top-nav scrolled" id="topNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        Abdelhamid Ramadan <span class="nav-logo-role">Android Developer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="blog.html"     class="nav-link">Blog</a>
+        <a href="gear.html"     class="nav-link">Gear</a>
+        <a href="about.html"    class="nav-link">About</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    class="mobile-link">Home</a>
+    <a href="projects.html" class="mobile-link">Projects</a>
+    <a href="blog.html"     class="mobile-link">Blog</a>
+    <a href="gear.html"     class="mobile-link">Gear</a>
+    <a href="about.html"    class="mobile-link">About</a>
+  </div>
+
+  <main class="sp-main">
+    <div class="section-container">
+
+      <a href="projects.html" class="sp-back">
+        <i class="fas fa-arrow-left"></i> All Projects
+      </a>
+
+      <div class="sp-hero">
+        <div class="sp-icon" style="background:#0d1f10; border-color:rgba(61,220,132,0.25);">
+          <i class="fas fa-hand-point-right" style="color:#3ddc84; font-size:2rem;"></i>
+        </div>
+        <div class="sp-hero-text">
+          <span class="card-badge" style="margin-bottom:.75rem; display:inline-block;">
+            ANDROID &middot; LIBRARY
+          </span>
+          <h1 class="sp-title">SwipeAction</h1>
+          <p class="sp-subtitle">
+            SwipeAction is an open-source Android library that brings effortless swipe-to-action gestures to any RecyclerView. Developers can attach swipe callbacks, custom icons, and background colors to list items in just a few lines of code — no boilerplate, no hassle.
+          </p>
+          <div class="sp-store-badges">
+            <a href="#" class="store-badge github-badge" target="_blank" rel="noopener" aria-label="Available on GitHub">
+              <svg class="store-badge-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <div class="store-badge-text">
+                <span class="store-badge-sub">Available on</span>
+                <span class="store-badge-main">GitHub</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sp-gallery-wrap">
+        <div class="sp-gallery">
+          <img src="images/port-item1.jpg" alt="SwipeAction demo screenshot 1" class="sp-screenshot">
+          <img src="images/port-item2.jpg" alt="SwipeAction demo screenshot 2" class="sp-screenshot">
+        </div>
+      </div>
+
+      <div class="sp-body">
+
+        <section class="sp-section">
+          <h2 class="sp-section-title">Introduction</h2>
+          <p>
+            SwipeAction was born out of frustration with the verbosity of Android's built-in
+            <strong style="color:var(--white);">ItemTouchHelper</strong>. Every RecyclerView swipe implementation
+            required dozens of lines of boilerplate — custom drawing logic, icon positioning, threshold detection —
+            repeated across every project.
+          </p>
+          <p style="margin-top:1rem;">
+            This library abstracts all of that into a clean, chainable API. Attach it to any RecyclerView, define
+            your swipe directions and actions, and the library handles rendering, haptic feedback, and callback
+            delivery automatically.
+          </p>
+        </section>
+
+        <section class="sp-section">
+          <h2 class="sp-section-title">Contributions</h2>
+          <ul class="sp-list">
+            <li>Designed and built the core swipe engine on top of <strong style="color:var(--white);">ItemTouchHelper</strong>, handling multi-directional swipe detection and threshold logic.</li>
+            <li>Implemented <strong style="color:var(--white);">custom Canvas drawing</strong> for icons and background color fills during the swipe gesture.</li>
+            <li>Added support for <strong style="color:var(--white);">both left and right swipe actions</strong> on the same item with independent callbacks and styling.</li>
+            <li>Published to <strong style="color:var(--white);">JitPack</strong> with a versioned release pipeline and a documented integration guide.</li>
+            <li>Wrote a sample app demonstrating all swipe configurations with a live preview.</li>
+          </ul>
+        </section>
+
+        <section class="sp-section">
+          <h2 class="sp-section-title">Key Highlights</h2>
+          <div class="sp-highlights">
+            <div class="sp-highlight-card">
+              <i class="fas fa-hand-point-right"></i>
+              <p class="sp-highlight-title">Zero Boilerplate</p>
+              <p class="sp-highlight-desc">Attach swipe actions to a RecyclerView in 3 lines — no custom ItemTouchHelper subclass needed.</p>
+            </div>
+            <div class="sp-highlight-card">
+              <i class="fas fa-paint-brush"></i>
+              <p class="sp-highlight-title">Custom Rendering</p>
+              <p class="sp-highlight-desc">Full control over icon, background color, and corner radius via a simple builder API.</p>
+            </div>
+            <div class="sp-highlight-card">
+              <i class="fas fa-arrows-alt-h"></i>
+              <p class="sp-highlight-title">Bi-directional</p>
+              <p class="sp-highlight-desc">Independent left and right swipe actions on the same item with separate callbacks.</p>
+            </div>
+            <div class="sp-highlight-card">
+              <i class="fab fa-github"></i>
+              <p class="sp-highlight-title">Open Source</p>
+              <p class="sp-highlight-desc">Published on JitPack with semantic versioning and a sample app for quick onboarding.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="sp-section">
+          <h2 class="sp-section-title">Technologies Used</h2>
+          <table class="tech-table">
+            <thead>
+              <tr><th>Tool / Library</th><th>Used for</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Kotlin</td><td>Primary language</td></tr>
+              <tr><td>RecyclerView / ItemTouchHelper</td><td>Swipe gesture foundation</td></tr>
+              <tr><td>Canvas API</td><td>Custom icon and background rendering</td></tr>
+              <tr><td>JitPack</td><td>Library distribution</td></tr>
+              <tr><td>GitHub Actions</td><td>CI for releases and sample app builds</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span class="footer-logo">Abdelhamid Ramadan</span>
+      <p class="footer-text">© 2025 Abdelhamid Ramadan. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+    document.querySelectorAll('.mobile-link').forEach(l =>
+      l.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggle.classList.remove('active');
+      })
+    );
+  </script>
+</body>
+</html>

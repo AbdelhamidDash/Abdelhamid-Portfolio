@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog | Abdelhamid Ramadan</title>
+  <link rel="icon" type="image/png" href="images/profile.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="top-nav scrolled" id="topNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        Abdelhamid Ramadan <span class="nav-logo-role">Android Developer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="blog.html"     class="nav-link active">Blog</a>
+        <a href="gear.html"     class="nav-link">Gear</a>
+        <a href="about.html"    class="nav-link">About</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    class="mobile-link">Home</a>
+    <a href="projects.html" class="mobile-link">Projects</a>
+    <a href="blog.html"     class="mobile-link">Blog</a>
+    <a href="gear.html"     class="mobile-link">Gear</a>
+    <a href="about.html"    class="mobile-link">About</a>
+  </div>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-hero">
+    <div class="section-container">
+      <div class="section-label" data-aos="fade-up">WRITING</div>
+      <h1 class="page-hero-title" data-aos="fade-up" data-aos-delay="50">Blog Posts</h1>
+      <p class="page-hero-desc" data-aos="fade-up" data-aos-delay="100">
+        Thoughts and guides on Android development, Flutter, and mobile engineering.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== POSTS GRID ===== -->
+  <section class="section">
+    <div class="section-container">
+      <div class="blog-grid" id="blogGrid">
+        <!-- Skeleton loaders -->
+        <article class="writing-card writing-skeleton">
+          <div class="writing-img-wrap skeleton-img"></div>
+          <div class="writing-body">
+            <div class="skeleton-line skeleton-line--short"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line skeleton-line--med"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </article>
+        <article class="writing-card writing-skeleton">
+          <div class="writing-img-wrap skeleton-img"></div>
+          <div class="writing-body">
+            <div class="skeleton-line skeleton-line--short"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line skeleton-line--med"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </article>
+        <article class="writing-card writing-skeleton">
+          <div class="writing-img-wrap skeleton-img"></div>
+          <div class="writing-body">
+            <div class="skeleton-line skeleton-line--short"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line skeleton-line--med"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </article>
+      </div>
+      <p id="blogEmpty" style="display:none;color:var(--text-muted);font-size:0.95rem;margin-top:2rem;">No posts published yet.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span class="footer-logo">Abdelhamid Ramadan</span>
+      <p class="footer-text">© 2025 Abdelhamid Ramadan. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/AbdelhamidDash" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/abdelhamidr/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://mastodon.social/@AbdehamidDash" class="social-link" aria-label="Mastodon" target="_blank" rel="noopener noreferrer"><i class="fab fa-mastodon"></i></a>
+        <a href="mailto:abdelhamydRamadan@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 750, once: true, offset: 80 });
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggle.classList.remove('active');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('topNav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // ── Hashnode dynamic posts ──────────────────────────────────
+    (async function loadBlogPosts() {
+      const HASHNODE_GQL = 'https://gql.hashnode.com';
+      const BLOG_HOST    = 'abdelhamidr.hashnode.dev';
+
+      const query = `{
+        publication(host: "${BLOG_HOST}") {
+          posts(first: 20) {
+            edges {
+              node {
+                title
+                brief
+                slug
+                publishedAt
+                readTimeInMinutes
+                coverImage { url }
+              }
+            }
+          }
+        }
+      }`;
+
+      function formatDate(iso) {
+        return new Date(iso).toLocaleDateString('en-US', {
+          month: 'short', day: 'numeric', year: 'numeric'
+        }).toUpperCase();
+      }
+
+      function buildCard(post, index) {
+        const url   = `https://${BLOG_HOST}/${post.slug}`;
+        const date  = formatDate(post.publishedAt);
+        const mins  = post.readTimeInMinutes || '?';
+        const delay = (index % 6) * 50;
+
+        const rawUrl = post.coverImage?.url || '';
+        const imgUrl = rawUrl ? rawUrl.replace(/\?.*$/, '') + '?w=600&auto=compress,format' : '';
+        const imgHtml = imgUrl
+          ? `<img src="${imgUrl}" alt="${post.title.replace(/"/g,'&quot;')}" class="writing-img" loading="lazy" decoding="async">`
+          : `<div style="width:100%;aspect-ratio:16/7;background:var(--card-bg);display:flex;align-items:center;justify-content:center;">
+               <i class="fas fa-pen-nib" style="font-size:2rem;color:var(--text-dim);"></i>
+             </div>`;
+
+        return `
+          <article class="writing-card" data-aos="fade-up" data-aos-delay="${delay}">
+            <a href="${url}" target="_blank" rel="noopener noreferrer" class="writing-img-wrap">${imgHtml}</a>
+            <div class="writing-body">
+              <div class="writing-meta">${date} <span class="writing-dot">•</span> ${mins} MIN READ</div>
+              <h3 class="writing-title">${post.title}</h3>
+              <a href="${url}" target="_blank" rel="noopener noreferrer" class="writing-read-link">READ ARTICLE</a>
+            </div>
+          </article>`;
+      }
+
+      try {
+        const res   = await fetch(HASHNODE_GQL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query })
+        });
+        const json  = await res.json();
+        const posts = json?.data?.publication?.posts?.edges?.map(e => e.node) || [];
+        const grid  = document.getElementById('blogGrid');
+
+        if (posts.length === 0) {
+          grid.innerHTML = '';
+          document.getElementById('blogEmpty').style.display = 'block';
+          return;
+        }
+
+        grid.innerHTML = posts.map((p, i) => buildCard(p, i)).join('');
+        AOS.refresh();
+      } catch (err) {
+        console.error('Failed to load blog posts:', err);
+      }
+    })();
+  </script>
+</body>
+</html>

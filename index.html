@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abdelhamid Ramadan | Personal Site</title>
+  <link rel="icon" type="image/png" href="images/profile.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="top-nav" id="topNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        Abdelhamid Ramadan <span class="nav-logo-role">Android Developer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"   class="nav-link active">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="blog.html"    class="nav-link">Blog</a>
+        <a href="gear.html"    class="nav-link">Gear</a>
+        <a href="about.html"   class="nav-link">About</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    class="mobile-link">Home</a>
+    <a href="projects.html" class="mobile-link">Projects</a>
+    <a href="blog.html"     class="mobile-link">Blog</a>
+    <a href="gear.html"     class="mobile-link">Gear</a>
+    <a href="about.html"    class="mobile-link">About</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+
+      <h1 class="hero-name" data-aos="fade-up" data-aos-delay="50">
+        Abdelhamid Ramadan.
+      </h1>
+
+      <p class="hero-tagline" data-aos="fade-up" data-aos-delay="150">
+        Android Developer crafting reliable apps, POS integrations, and Flutter solutions.
+      </p>
+
+      <p class="hero-desc" data-aos="fade-up" data-aos-delay="250">
+        I build and ship polished mobile products with Flutter and Android, and I share what I learn through open-source work and technical writing.
+      </p>
+
+      <div class="hero-ctas" data-aos="fade-up" data-aos-delay="350">
+        <a href="projects.html" class="cta-link">
+          View Projects
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="blog.html" class="cta-link">
+          Read Articles
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-socials" data-aos="fade-up" data-aos-delay="450">
+        <a href="https://github.com/AbdelhamidDash" class="social-pill" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GITHUB</a>
+        <a href="https://www.linkedin.com/in/abdelhamidr/" class="social-pill" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> LINKEDIN</a>
+        <a href="https://mastodon.social/@AbdehamidDash" class="social-pill" target="_blank" rel="noopener noreferrer"><i class="fab fa-mastodon"></i> MASTODON</a>
+        <div class="email-picker-wrap">
+          <button class="social-pill email-trigger" onclick="toggleEmailPicker(event)">
+            <i class="fas fa-envelope"></i> EMAIL
+          </button>
+          <div class="email-picker" id="emailPicker">
+            <a href="https://mail.google.com/mail/?view=cm&to=abdelhamydRamadan@gmail.com" target="_blank" rel="noopener noreferrer" class="email-option">
+              <i class="fab fa-google"></i> Open in Gmail
+            </a>
+            <a href="https://outlook.live.com/mail/0/deeplink/compose?to=abdelhamydRamadan@gmail.com" target="_blank" rel="noopener noreferrer" class="email-option">
+              <i class="fas fa-envelope"></i> Open in Outlook
+            </a>
+            <a href="mailto:abdelhamydRamadan@gmail.com" class="email-option">
+              <i class="fas fa-desktop"></i> Default Mail App
+            </a>
+            <button class="email-option copy-btn" onclick="copyEmail()">
+              <i class="fas fa-copy"></i> Copy Address
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CURRENT FOCUS ===== (commented out until further notice)
+  <section class="section section-alt">
+    <div class="section-container">
+      <div class="section-label" data-aos="fade-up">CURRENTLY</div>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">What I'm Working On</h2>
+      <div class="focus-grid">
+
+        <div class="focus-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="focus-status status-progress">IN PROGRESS</span>
+          <h3>POS Hardware Integration</h3>
+          <p>Integrating Android apps with POS terminals and payment SDKs — handling serial communication, receipt printing, and transaction flows end-to-end.</p>
+        </div>
+
+        <div class="focus-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="focus-status status-learning">EXPLORING</span>
+          <h3>Type-Safe Routing with go_router</h3>
+          <p>Deep-diving into go_router for production Flutter apps — building navigation graphs that are fully type-safe, testable, and deep-link friendly.</p>
+        </div>
+
+        <div class="focus-card" data-aos="fade-up" data-aos-delay="300">
+          <span class="focus-status status-shipped">SHIPPED</span>
+          <h3>Offline-First Architecture</h3>
+          <p>Designed and shipped an offline-first data layer using Room + WorkManager, enabling full app functionality with zero network connection.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ===== LATEST WRITING ===== -->
+  <section class="section">
+    <div class="section-container">
+      <div class="writing-header" data-aos="fade-up">
+        <div>
+          <div class="section-label" style="margin-bottom:0.4rem;">LATEST WRITING</div>
+        </div>
+        <a href="https://abdelhamidr.hashnode.dev/" target="_blank" rel="noopener noreferrer" class="writing-all-link">All Posts <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="writing-grid" id="writingGrid">
+        <!-- Skeleton loaders shown while fetching -->
+        <article class="writing-card writing-skeleton">
+          <div class="writing-img-wrap skeleton-img"></div>
+          <div class="writing-body">
+            <div class="skeleton-line skeleton-line--short"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line skeleton-line--med"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </article>
+        <article class="writing-card writing-skeleton">
+          <div class="writing-img-wrap skeleton-img"></div>
+          <div class="writing-body">
+            <div class="skeleton-line skeleton-line--short"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line skeleton-line--med"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OPEN SOURCE PROJECTS ===== (commented out until further notice)
+  <section class="section section-alt">
+    <div class="section-container">
+      <div class="writing-header" data-aos="fade-up">
+        <div>
+          <div class="section-label" style="margin-bottom:0.4rem;">OPEN SOURCE PROJECTS</div>
+        </div>
+        <a href="projects.html" class="writing-all-link">All Projects <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="projects-grid" data-aos="fade-up" data-aos-delay="100">
+
+        <a href="swipe-action.html" class="project-card">
+          <div class="card-top">
+            <div class="card-icon" style="background:#0d1f10;">
+              <i class="fas fa-hand-point-right" style="color:#3ddc84;font-size:1.4rem;"></i>
+            </div>
+            <span class="card-badge">ANDROID · LIBRARY</span>
+          </div>
+          <h3 class="card-title">SwipeAction</h3>
+          <p class="card-desc">An open-source Android library that brings effortless swipe-to-action gestures to any RecyclerView in just a few lines of code.</p>
+          <span class="card-cta">EXPLORE PROJECT <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="flutter-color-picker.html" class="project-card">
+          <div class="card-top">
+            <div class="card-icon" style="background:#0d1117;">
+              <i class="fas fa-palette" style="color:#54c5f8;font-size:1.4rem;"></i>
+            </div>
+            <span class="card-badge">FLUTTER · LIBRARY</span>
+          </div>
+          <h3 class="card-title">FlutterColorPicker</h3>
+          <p class="card-desc">A fully customizable Flutter color picker widget supporting HSV, RGB, and hex input modes — published on pub.dev.</p>
+          <span class="card-cta">EXPLORE PROJECT <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+        <a href="net-watcher.html" class="project-card">
+          <div class="card-top">
+            <div class="card-icon" style="background:#120458;">
+              <i class="fas fa-wifi" style="color:#8b5cf6;font-size:1.4rem;"></i>
+            </div>
+            <span class="card-badge">ANDROID · LIBRARY</span>
+          </div>
+          <h3 class="card-title">NetWatcher</h3>
+          <p class="card-desc">A lightweight lifecycle-aware Android library for real-time network monitoring, exposed as LiveData and Kotlin Flow.</p>
+          <span class="card-cta">EXPLORE PROJECT <i class="fas fa-arrow-right"></i></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ===== CLOSED SOURCE PROJECTS ===== -->
+  <section class="section">
+    <div class="section-container">
+      <div class="writing-header" data-aos="fade-up">
+        <div>
+          <div class="section-label" style="margin-bottom:0.4rem;">CLOSED SOURCE PROJECTS</div>
+        </div>
+        <a href="projects.html" class="writing-all-link">All Projects <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="closed-proj-grid" data-aos="fade-up" data-aos-delay="100">
+
+        <a href="chemist-app.html" class="closed-proj-card">
+          <div class="closed-proj-img-wrap">
+            <img src="images/IDH-ChemistAppLogo.png" alt="IDH Chemist App" class="closed-proj-img closed-proj-img--logo">
+            <span class="closed-proj-badge">ANDROID · POS</span>
+          </div>
+          <div class="closed-proj-body">
+            <h3 class="closed-proj-title">IDH Chemist App</h3>
+            <p class="closed-proj-desc">Consolidated two separate codebases into a unified, production-ready app with authentication, caching, and real-time price sync for medical labs.</p>
+            <span class="card-cta">EXPLORE PROJECT <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="asset-audit.html" class="closed-proj-card">
+          <div class="closed-proj-img-wrap">
+            <img src="images/IDH-AssetAuditLogo.png" alt="IDH Asset Audit" class="closed-proj-img closed-proj-img--logo">
+            <span class="closed-proj-badge">FLUTTER</span>
+          </div>
+          <div class="closed-proj-body">
+            <h3 class="closed-proj-title">IDH Asset Audit</h3>
+            <p class="closed-proj-desc">Enterprise inventory reconciliation across 600+ branches. Barcode scanning, duplicate detection, and real-time data quality auditing with offline-first sync.</p>
+            <span class="card-cta">EXPLORE PROJECT <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="package-app.html" class="closed-proj-card">
+          <div class="closed-proj-img-wrap">
+            <div class="closed-proj-svg-logo" style="background:#0c1a2e;">
+              <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                <rect width="120" height="80" fill="#0c1a2e"/>
+                <rect x="38" y="42" width="44" height="28" rx="4" fill="#0ea5e9"/>
+                <polygon points="38,42 60,30 82,42 60,54" fill="#38bdf8"/>
+                <polyline points="46,56 55,66 76,46" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="closed-proj-badge">FLUTTER · LOGISTICS</span>
+          </div>
+          <div class="closed-proj-body">
+            <h3 class="closed-proj-title">PackTrack</h3>
+            <p class="closed-proj-desc">A cross-platform delivery app where couriers scan packages at pick-up and receivers approve delivery — creating a full chain of custody per shipment.</p>
+            <span class="card-cta">EXPLORE PROJECT <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="dua-app.html" class="closed-proj-card">
+          <div class="closed-proj-img-wrap">
+            <div class="closed-proj-svg-logo" style="background:#0a1f12;">
+              <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                <rect width="120" height="80" fill="#0a1f12"/>
+                <circle cx="56" cy="40" r="22" fill="#4ade80"/>
+                <circle cx="67" cy="33" r="17" fill="#0a1f12"/>
+                <polygon points="92,12 95,21 104,24 95,27 92,36 89,27 80,24 89,21" fill="#4ade80" opacity="0.9"/>
+              </svg>
+            </div>
+            <span class="closed-proj-badge">ANDROID &middot; KOTLIN</span>
+          </div>
+          <div class="closed-proj-body">
+            <h3 class="closed-proj-title">Dua App</h3>
+            <p class="closed-proj-desc">Production-grade Islamic companion for Kheprx. Full offline Quran, prayer times, Qibla direction, Azan notifications, and mosque finder — zero network dependency.</p>
+            <span class="card-cta">EXPLORE PROJECT <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="graduation-project.html" class="closed-proj-card">
+          <div class="closed-proj-img-wrap">
+            <div class="closed-proj-svg-logo" style="background:#0f1728;">
+              <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                <rect width="120" height="80" fill="#0f1728"/>
+                <polygon points="60,18 96,34 60,50 24,34" fill="#818cf8"/>
+                <rect x="38" y="42" width="44" height="22" rx="4" fill="#6366f1"/>
+                <line x1="96" y1="34" x2="96" y2="54" stroke="#818cf8" stroke-width="3"/>
+                <circle cx="96" cy="57" r="5" fill="#818cf8"/>
+                <circle cx="34" cy="68" r="4" fill="#6366f1"/>
+                <line x1="38" y1="68" x2="54" y2="68" stroke="#475569" stroke-width="2" stroke-dasharray="3,2"/>
+                <circle cx="60" cy="68" r="4" fill="#6366f1"/>
+                <line x1="64" y1="68" x2="80" y2="68" stroke="#475569" stroke-width="2" stroke-dasharray="3,2"/>
+                <circle cx="86" cy="68" r="4" fill="#818cf8"/>
+              </svg>
+            </div>
+            <span class="closed-proj-badge">ANDROID &middot; GRADUATION</span>
+          </div>
+          <div class="closed-proj-body">
+            <h3 class="closed-proj-title">CS Track Roadmap</h3>
+            <p class="closed-proj-desc">Graduation project at Modern Academy Maadi. Helps CS students pick a specialization, sit an adaptive assessment, and get a personalized university subject roadmap.</p>
+            <span class="card-cta">EXPLORE PROJECT <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span class="footer-logo">Abdelhamid Ramadan</span>
+      <p class="footer-text">© 2025 Abdelhamid Ramadan. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/AbdelhamidDash" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/abdelhamidr/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://mastodon.social/@AbdehamidDash" class="social-link" aria-label="Mastodon" target="_blank" rel="noopener noreferrer"><i class="fab fa-mastodon"></i></a>
+        <a href="mailto:abdelhamydRamadan@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 750, once: true, offset: 80 });
+
+    // ── Hashnode dynamic posts ──────────────────────────────────
+    (async function loadPosts() {
+      const HASHNODE_GQL = 'https://gql.hashnode.com';
+      const BLOG_HOST    = 'abdelhamidr.hashnode.dev';
+
+      const query = `{
+        publication(host: "${BLOG_HOST}") {
+          posts(first: 4) {
+            edges {
+              node {
+                title
+                slug
+                publishedAt
+                readTimeInMinutes
+                coverImage { url }
+              }
+            }
+          }
+        }
+      }`;
+
+      function formatDate(iso) {
+        const d = new Date(iso);
+        return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase();
+      }
+
+      function buildCard(post, index) {
+        const url    = `https://${BLOG_HOST}/${post.slug}`;
+        const rawUrl = post.coverImage?.url || '';
+        const imgUrl = rawUrl ? rawUrl.replace(/\?.*$/, '') + '?w=600&auto=compress,format' : '';
+        const date   = formatDate(post.publishedAt);
+        const mins   = post.readTimeInMinutes || '?';
+        const delay  = (index + 1) * 100;
+
+        const imgHtml = imgUrl
+          ? `<img src="${imgUrl}" alt="${post.title.replace(/"/g,'&quot;')}" class="writing-img" loading="lazy" decoding="async">`
+          : `<div style="width:100%;aspect-ratio:16/7;background:var(--card-bg);display:flex;align-items:center;justify-content:center;">
+               <i class="fas fa-pen-nib" style="font-size:2rem;color:var(--text-dim);"></i>
+             </div>`;
+
+        return `
+          <article class="writing-card" data-aos="fade-up" data-aos-delay="${delay}">
+            <a href="${url}" target="_blank" rel="noopener noreferrer" class="writing-img-wrap">${imgHtml}</a>
+            <div class="writing-body">
+              <div class="writing-meta">${date} <span class="writing-dot">•</span> ${mins} MIN READ</div>
+              <h3 class="writing-title">${post.title}</h3>
+              <a href="${url}" target="_blank" rel="noopener noreferrer" class="writing-read-link">READ ARTICLE</a>
+            </div>
+          </article>`;
+      }
+
+      try {
+        const res  = await fetch(HASHNODE_GQL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query })
+        });
+        const json = await res.json();
+        const posts = json?.data?.publication?.posts?.edges?.map(e => e.node) || [];
+
+        const grid = document.getElementById('writingGrid');
+        if (posts.length === 0) {
+          grid.innerHTML = '<p style="color:var(--text-muted);font-size:0.9rem;">No posts found.</p>';
+          return;
+        }
+        grid.innerHTML = posts.map((p, i) => buildCard(p, i)).join('');
+        AOS.refresh();
+      } catch (err) {
+        console.error('Failed to load posts:', err);
+        // Leave skeleton visible on failure — silent fallback
+      }
+    })();
+
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggle.classList.remove('active');
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('topNav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    function toggleEmailPicker(e) {
+      e.stopPropagation();
+      document.getElementById('emailPicker').classList.toggle('open');
+    }
+
+    function copyEmail() {
+      navigator.clipboard.writeText('abdelhamydRamadan@gmail.com').then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        setTimeout(() => { btn.innerHTML = '<i class="fas fa-copy"></i> Copy Address'; }, 2000);
+      });
+    }
+
+    document.addEventListener('click', () => {
+      document.getElementById('emailPicker').classList.remove('open');
+    });
+  </script>
+</body>
+</html>

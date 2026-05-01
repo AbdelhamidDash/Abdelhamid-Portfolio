@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start \"c:\\\\Users\\\\Abdelhamid.Ramadan\\\\Downloads\\\\miller-free\\\\index.html\")",
+      "Bash(wc -l \"e:\\\\Abdelhamid Ramadan Portfolio\"/*.html)",
+      "Bash(grep -l \"Asset Audit\\\\|asset.audit\\\\|APK\" \"e:\\\\Abdelhamid Ramadan Portfolio\"/*.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8085/index.html)",
+      "Bash(node -e \":*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8086/images/profile.png)",
+      "Bash(start index.html)",
+      "Bash(npx --yes http-server -p 8080 --cors)"
+    ]
+  }
+}

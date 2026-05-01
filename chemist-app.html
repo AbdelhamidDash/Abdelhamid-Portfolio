@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IDH Chemist App | Abdelhamid Ramadan</title>
+  <link rel="icon" type="image/png" href="images/profile.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="top-nav scrolled" id="topNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        Abdelhamid Ramadan <span class="nav-logo-role">Android Developer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="blog.html"     class="nav-link">Blog</a>
+        <a href="gear.html"     class="nav-link">Gear</a>
+        <a href="about.html"    class="nav-link">About</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    class="mobile-link">Home</a>
+    <a href="projects.html" class="mobile-link">Projects</a>
+    <a href="blog.html"     class="mobile-link">Blog</a>
+    <a href="gear.html"     class="mobile-link">Gear</a>
+    <a href="about.html"    class="mobile-link">About</a>
+  </div>
+
+  <main class="sp-main">
+    <div class="section-container">
+
+      <!-- Back link -->
+      <a href="projects.html" class="sp-back">
+        <i class="fas fa-arrow-left"></i> All Projects
+      </a>
+
+      <!-- Project Hero -->
+      <div class="sp-hero">
+        <div class="sp-flavors">
+          <div class="sp-flavor-item">
+            <div class="sp-icon" style="background:#F5B800; border-color:rgba(245,184,0,0.4); overflow:hidden; padding:0;">
+              <svg width="100%" height="100%" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                <rect width="80" height="80" fill="#F5B800"/>
+                <!-- alborg text -->
+                <text x="8" y="35" font-family="Arial Black,Arial" font-weight="900" font-size="17" fill="#111" letter-spacing="-0.5">alborg</text>
+                <!-- labs & scans text -->
+                <text x="8" y="50" font-family="Arial,sans-serif" font-weight="700" font-size="9.5" fill="#111">labs &amp; scans</text>
+                <!-- dots pattern top-right -->
+                <circle cx="63" cy="12" r="4.5" fill="#111"/>
+                <circle cx="72" cy="18" r="3.2" fill="#111"/>
+                <circle cx="67" cy="6"  r="2.4" fill="#111"/>
+                <circle cx="76" cy="11" r="2"   fill="#111"/>
+                <circle cx="58" cy="21" r="2.8" fill="#111"/>
+                <circle cx="72" cy="28" r="4"   fill="#111"/>
+                <circle cx="63" cy="32" r="2.4" fill="#111"/>
+                <circle cx="76" cy="38" r="2.8" fill="#111"/>
+                <circle cx="67" cy="44" r="3.8" fill="#111"/>
+                <circle cx="58" cy="50" r="2"   fill="#111"/>
+                <circle cx="72" cy="54" r="3.2" fill="#111"/>
+              </svg>
+            </div>
+            <span class="sp-flavor-label">Alborg Labs &amp; Scans</span>
+          </div>
+          <div class="sp-flavor-item">
+            <div class="sp-icon" style="background:#000; border-color:rgba(139,92,246,0.25); overflow:hidden; padding:0;">
+              <img src="images/almokhtabar-logo.png" alt="Almokhtabar logo" style="width:100%; height:100%; object-fit:cover; border-radius:18px;">
+            </div>
+            <span class="sp-flavor-label">Almokhtabar</span>
+          </div>
+        </div>
+
+        <div class="sp-hero-text">
+          <span class="card-badge" style="margin-bottom:.75rem; display:inline-block;">
+            ANDROID &middot; BUILD FLAVORS
+          </span>
+          <h1 class="sp-title">IDH Chemist App</h1>
+          <p class="sp-subtitle">
+            The IDH Chemist App brings medical lab services to patients' doorsteps. Available for both Alborg and Almokhtabar labs, it lets patients track their chemist's live location in real time, with optimized routing from the chemist to the patient. Built on a single unified Android codebase using build flavors, the app delivers seamless POS integration, offline access, and a smooth experience under both brand identities.
+          </p>
+
+          <!-- Store Badges -->
+          <div class="sp-store-badges">
+            <!-- <a href="#" class="store-badge" target="_blank" rel="noopener" aria-label="Download on the App Store">
+              <svg class="store-badge-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <div class="store-badge-text">
+                <span class="store-badge-sub">Download on the</span>
+                <span class="store-badge-main">App Store</span>
+              </div>
+            </a> -->
+
+            <div class="badge-picker-wrap">
+              <button class="store-badge badge-picker-trigger" aria-expanded="false" aria-haspopup="true" aria-label="Get it on Google Play — choose flavor">
+                <svg class="store-badge-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.65z"/><path fill="#FBBC05" d="M20.32 10.6l-2.5-1.43-3 2.83 3 2.83 2.53-1.45a1.63 1.63 0 0 0 0-2.78z"/><path fill="#4285F4" d="M3.18.24 14.83 11.89 11.82 14.7 3.18.24z" opacity=".8"/><path fill="#34A853" d="M3.18 23.76l8.64-14.48 3 2.83-11.64 11.65z"/></svg>
+                <div class="store-badge-text">
+                  <span class="store-badge-sub">GET IT ON</span>
+                  <span class="store-badge-main">Google Play <span class="badge-chevron">▾</span></span>
+                </div>
+              </button>
+              <div class="badge-picker-dropdown" hidden>
+                <p class="badge-picker-label">Choose your lab:</p>
+                <a href="#" class="badge-picker-option almokhtabar-option" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.65z"/><path fill="#FBBC05" d="M20.32 10.6l-2.5-1.43-3 2.83 3 2.83 2.53-1.45a1.63 1.63 0 0 0 0-2.78z"/><path fill="#4285F4" d="M3.18.24 14.83 11.89 11.82 14.7 3.18.24z" opacity=".8"/><path fill="#34A853" d="M3.18 23.76l8.64-14.48 3 2.83-11.64 11.65z"/></svg>
+                  <span class="badge-picker-brand">Almokhtabar</span>
+                  <span class="badge-picker-store">Google Play</span>
+                </a>
+                <a href="#" class="badge-picker-option alborg-option" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.65z"/><path fill="#FBBC05" d="M20.32 10.6l-2.5-1.43-3 2.83 3 2.83 2.53-1.45a1.63 1.63 0 0 0 0-2.78z"/><path fill="#4285F4" d="M3.18.24 14.83 11.89 11.82 14.7 3.18.24z" opacity=".8"/><path fill="#34A853" d="M3.18 23.76l8.64-14.48 3 2.83-11.64 11.65z"/></svg>
+                  <span class="badge-picker-brand">Alborg</span>
+                  <span class="badge-picker-store">Google Play</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screenshot Gallery -->
+      <div class="sp-showcase">
+
+        <!-- ALMOKHTABAR CARDS -->
+        <h2 class="sp-showcase-title"><span class="sp-showcase-dot almokhtabar-dot"></span> Almokhtabar</h2>
+        <div class="showcase-grid">
+          <div class="sc-card almokhtabar-card">
+            <div class="sc-accent"></div>
+            <div class="sc-content">
+              <div class="sc-text">
+                <div class="sc-badge">Home Screen</div>
+                <div class="sc-title">Visit Management</div>
+                <div class="sc-desc">Track and manage daily house calls with real-time updates and patient details.</div>
+              </div>
+              <div class="sc-phone">
+                <div class="sc-phone-frame">
+                  <div class="sc-phone-screen">
+                    <div class="sc-phone-body">
+                      <div class="sc-screen-header">Home</div>
+                      <div class="sc-screen-item sc-red">Today's Visits</div>
+                      <div class="sc-screen-item sc-red">House Call</div>
+                      <div class="sc-screen-item sc-red">Patient Info</div>
+                      <div class="sc-screen-btns">
+                        <button class="sc-btn sc-btn-red">Go</button>
+                        <button class="sc-btn sc-btn-red">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sc-card almokhtabar-card">
+            <div class="sc-accent"></div>
+            <div class="sc-content">
+              <div class="sc-text">
+                <div class="sc-badge">GPS Feature</div>
+                <div class="sc-title">Live Tracking</div>
+                <div class="sc-desc">Real-time GPS tracking with optimized routing for efficient house visits.</div>
+              </div>
+              <div class="sc-phone">
+                <div class="sc-phone-frame">
+                  <div class="sc-phone-screen">
+                    <div class="sc-phone-body">
+                      <div class="sc-screen-header">Location</div>
+                      <div class="sc-map-placeholder">📍 Map</div>
+                      <div class="sc-screen-item sc-red">Address</div>
+                      <div class="sc-screen-btns">
+                        <button class="sc-btn sc-btn-red">Confirm</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sc-card almokhtabar-card">
+            <div class="sc-accent"></div>
+            <div class="sc-content">
+              <div class="sc-text">
+                <div class="sc-badge">Payment</div>
+                <div class="sc-title">Financial Tracking</div>
+                <div class="sc-desc">Complete payment management with multiple methods and transaction history.</div>
+              </div>
+              <div class="sc-phone">
+                <div class="sc-phone-frame">
+                  <div class="sc-phone-screen">
+                    <div class="sc-phone-body">
+                      <div class="sc-screen-header">Payment</div>
+                      <div class="sc-screen-item sc-red">Total: 405</div>
+                      <div class="sc-screen-item sc-red">Paid: 0</div>
+                      <div class="sc-screen-item sc-red">Remaining</div>
+                      <div class="sc-screen-btns">
+                        <button class="sc-btn sc-btn-red">OTP</button>
+                        <button class="sc-btn sc-btn-red">SMS</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ALBORG CARDS -->
+        <h2 class="sp-showcase-title" style="margin-top:2.5rem;"><span class="sp-showcase-dot alborg-dot"></span> Alborg</h2>
+        <div class="showcase-grid">
+          <div class="sc-card alborg-card">
+            <div class="sc-accent"></div>
+            <div class="sc-content">
+              <div class="sc-text">
+                <div class="sc-badge sc-badge-dark">Home Screen</div>
+                <div class="sc-title sc-title-dark">Visit Management</div>
+                <div class="sc-desc sc-desc-dark">Track and manage daily house calls with real-time updates and patient details.</div>
+              </div>
+              <div class="sc-phone">
+                <div class="sc-phone-frame">
+                  <div class="sc-phone-screen">
+                    <div class="sc-phone-body">
+                      <div class="sc-screen-header">Home</div>
+                      <div class="sc-screen-item sc-yellow">Today's Visits</div>
+                      <div class="sc-screen-item sc-yellow">House Call</div>
+                      <div class="sc-screen-item sc-yellow">Patient Info</div>
+                      <div class="sc-screen-btns">
+                        <button class="sc-btn sc-btn-yellow">Go</button>
+                        <button class="sc-btn sc-btn-yellow">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sc-card alborg-card">
+            <div class="sc-accent"></div>
+            <div class="sc-content">
+              <div class="sc-text">
+                <div class="sc-badge sc-badge-dark">GPS Feature</div>
+                <div class="sc-title sc-title-dark">Live Tracking</div>
+                <div class="sc-desc sc-desc-dark">Real-time GPS tracking with optimized routing for efficient house visits.</div>
+              </div>
+              <div class="sc-phone">
+                <div class="sc-phone-frame">
+                  <div class="sc-phone-screen">
+                    <div class="sc-phone-body">
+                      <div class="sc-screen-header">Location</div>
+                      <div class="sc-map-placeholder">📍 Map</div>
+                      <div class="sc-screen-item sc-yellow">Address</div>
+                      <div class="sc-screen-btns">
+                        <button class="sc-btn sc-btn-yellow">Confirm</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sc-card alborg-card">
+            <div class="sc-accent"></div>
+            <div class="sc-content">
+              <div class="sc-text">
+                <div class="sc-badge sc-badge-dark">Payment</div>
+                <div class="sc-title sc-title-dark">Financial Tracking</div>
+                <div class="sc-desc sc-desc-dark">Complete payment management with multiple methods and transaction history.</div>
+              </div>
+              <div class="sc-phone">
+                <div class="sc-phone-frame">
+                  <div class="sc-phone-screen">
+                    <div class="sc-phone-body">
+                      <div class="sc-screen-header">Payment</div>
+                      <div class="sc-screen-item sc-yellow">Total: 405</div>
+                      <div class="sc-screen-item sc-yellow">Paid: 0</div>
+                      <div class="sc-screen-item sc-yellow">Remaining</div>
+                      <div class="sc-screen-btns">
+                        <button class="sc-btn sc-btn-yellow">OTP</button>
+                        <button class="sc-btn sc-btn-yellow">SMS</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Body -->
+      <div class="sp-body">
+
+        <!-- Introduction -->
+        <section class="sp-section">
+          <h2 class="sp-section-title">Introduction</h2>
+          <p>
+            IDH Chemist App is an Android POS application built for two of Egypt's largest medical testing lab chains —
+            <strong style="color:var(--white);">Alborg</strong> and <strong style="color:var(--white);">Almokhtabar</strong>.
+            Both labs previously maintained separate codebases for their customer-facing apps, leading to duplicated effort
+            and inconsistent feature delivery.
+          </p>
+          <p style="margin-top:1rem;">
+            The project consolidated both apps into a single, unified Android codebase using
+            <strong style="color:var(--white);">Android Build Flavors</strong>, allowing each brand to ship its own
+            production app with distinct branding while sharing all core logic — authentication, caching, pricing, and POS integration.
+          </p>
+        </section>
+
+        <!-- Contributions -->
+        <section class="sp-section">
+          <h2 class="sp-section-title">Contributions</h2>
+          <ul class="sp-list">
+            <li>Consolidated two separate codebases into a single Android project using <strong style="color:var(--white);">product flavors</strong>, eliminating duplicated logic and reducing future maintenance cost.</li>
+            <li>Stabilized the legacy apps with critical bug fixes to <strong style="color:var(--white);">keep operations running</strong> while the unified codebase was in development.</li>
+            <li>Integrated with <strong style="color:var(--white);">POS hardware</strong> for real-time price synchronization across lab service catalogs.</li>
+            <li>Built a <strong style="color:var(--white);">secure authentication flow</strong> for lab staff with session persistence and access control.</li>
+            <li>Implemented <strong style="color:var(--white);">offline caching with Room DB</strong> so core operations remain available without a network connection.</li>
+            <li>Developed a <strong style="color:var(--white);">live location tracking</strong> feature allowing patients to follow their chemist in real time, with shortest-path routing from the chemist to the patient's location.</li>
+          </ul>
+        </section>
+
+        <!-- Key Highlights -->
+        <section class="sp-section">
+          <h2 class="sp-section-title">Key Highlights</h2>
+          <div class="sp-highlights">
+
+            <div class="sp-highlight-card">
+              <i class="fas fa-code-branch"></i>
+              <p class="sp-highlight-title">Build Flavors</p>
+              <p class="sp-highlight-desc">One codebase, two production apps via Android product flavors — Alborg &amp; Almokhtabar share logic while keeping brand-specific configs separate.</p>
+            </div>
+
+            <div class="sp-highlight-card">
+              <i class="fas fa-receipt"></i>
+              <p class="sp-highlight-title">POS Integration</p>
+              <p class="sp-highlight-desc">Real-time price synchronization with POS hardware for medical testing lab workflows.</p>
+            </div>
+
+            <div class="sp-highlight-card">
+              <i class="fas fa-lock"></i>
+              <p class="sp-highlight-title">Authentication</p>
+              <p class="sp-highlight-desc">Secure login flow for lab staff with session management and access control.</p>
+            </div>
+
+            <div class="sp-highlight-card">
+              <i class="fas fa-database"></i>
+              <p class="sp-highlight-title">Offline Caching</p>
+              <p class="sp-highlight-desc">Room DB keeps critical data available offline so operations continue without a network connection.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="sp-section">
+          <h2 class="sp-section-title">Technologies Used</h2>
+          <table class="tech-table">
+            <thead>
+              <tr>
+                <th>Tool / Library</th>
+                <th>Used for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kotlin</td>
+                <td>Primary programming language</td>
+              </tr>
+              <tr>
+                <td>Android Build Flavors</td>
+                <td>Alborg &amp; Almokhtabar variants from one codebase</td>
+              </tr>
+              <tr>
+                <td>Retrofit</td>
+                <td>REST API calls</td>
+              </tr>
+              <tr>
+                <td>Room</td>
+                <td>Offline caching / local database</td>
+              </tr>
+              <tr>
+                <td>Hilt</td>
+                <td>Dependency injection</td>
+              </tr>
+              <tr>
+                <td>POS SDK</td>
+                <td>Hardware price sync &amp; printing</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+      <!-- /sp-body -->
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span class="footer-logo">Abdelhamid Ramadan</span>
+      <p class="footer-text">© 2025 Abdelhamid Ramadan. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+    document.querySelectorAll('.mobile-link').forEach(l =>
+      l.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggle.classList.remove('active');
+      })
+    );
+
+    // Google Play brand picker
+    const pickerTrigger = document.querySelector('.badge-picker-trigger');
+    const pickerDropdown = document.querySelector('.badge-picker-dropdown');
+    if (pickerTrigger && pickerDropdown) {
+      pickerTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = !pickerDropdown.hidden;
+        pickerDropdown.hidden = isOpen;
+        pickerTrigger.setAttribute('aria-expanded', String(!isOpen));
+      });
+      document.addEventListener('click', () => {
+        pickerDropdown.hidden = true;
+        pickerTrigger.setAttribute('aria-expanded', 'false');
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          pickerDropdown.hidden = true;
+          pickerTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

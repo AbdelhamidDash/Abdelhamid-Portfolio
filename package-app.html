@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PackTrack | Abdelhamid Ramadan</title>
+  <link rel="icon" type="image/png" href="images/profile.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+
+  <style>
+    /* "Coming Soon" badge wrapping the store buttons */
+    .store-soon-wrap {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .45rem;
+    }
+    .store-soon-badge {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: #0ea5e9;
+      background: rgba(14,165,233,.13);
+      border: 1px solid rgba(14,165,233,.35);
+      border-radius: 20px;
+      padding: .2rem .75rem;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .store-badge.coming-soon {
+      opacity: .55;
+      cursor: default;
+      pointer-events: none;
+    }
+    .sp-store-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+      align-items: flex-end;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="top-nav scrolled" id="topNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        Abdelhamid Ramadan <span class="nav-logo-role">Android Developer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="blog.html"     class="nav-link">Blog</a>
+        <a href="gear.html"     class="nav-link">Gear</a>
+        <a href="about.html"    class="nav-link">About</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    class="mobile-link">Home</a>
+    <a href="projects.html" class="mobile-link">Projects</a>
+    <a href="blog.html"     class="mobile-link">Blog</a>
+    <a href="gear.html"     class="mobile-link">Gear</a>
+    <a href="about.html"    class="mobile-link">About</a>
+  </div>
+
+  <main class="sp-main">
+    <div class="section-container">
+
+      <!-- Back link -->
+      <a href="projects.html" class="sp-back">
+        <i class="fas fa-arrow-left"></i> All Projects
+      </a>
+
+      <!-- Project Hero -->
+      <div class="sp-hero">
+
+        <!-- App Icon -->
+        <div class="sp-icon" style="background:#0c1a2e; border-color:rgba(14,165,233,0.35); overflow:hidden; padding:0;">
+          <svg width="100%" height="100%" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" fill="#0c1a2e"/>
+            <!-- Box body -->
+            <rect x="18" y="32" width="44" height="32" rx="4" fill="#0ea5e9"/>
+            <!-- Box lid top face -->
+            <polygon points="18,32 40,22 62,32 40,42" fill="#38bdf8"/>
+            <!-- Box lid left flap -->
+            <polygon points="18,32 18,36 40,46 40,42" fill="#0284c7"/>
+            <!-- Box lid right flap -->
+            <polygon points="62,32 62,36 40,46 40,42" fill="#0369a1"/>
+            <!-- Center tape line on lid -->
+            <polygon points="37,22 43,22 43,46 37,46" fill="rgba(255,255,255,0.18)"/>
+            <!-- Checkmark on box face -->
+            <polyline points="29,48 36,55 52,40" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="sp-hero-text">
+          <span class="card-badge" style="margin-bottom:.75rem; display:inline-block;">
+            FLUTTER &middot; LOGISTICS
+          </span>
+          <h1 class="sp-title">PackTrack</h1>
+          <p class="sp-subtitle">
+            PackTrack is a Flutter-based package delivery app built for field couriers and branch operations.
+            Each courier logs in and is automatically assigned to their branch, sees their pending package list,
+            scans each package to confirm pick-up, and marks it as delivered upon arrival. The receiver at the
+            destination must open the app and approve the delivery — creating a fully auditable, end-to-end
+            chain of custody for every shipment.
+          </p>
+
+          <!-- Store Badges -->
+          <div class="sp-store-badges">
+
+            <!-- Apple App Store – coming soon -->
+            <div class="store-soon-wrap">
+              <a href="#" class="store-badge coming-soon" aria-label="Download on the App Store" tabindex="-1">
+                <svg class="store-badge-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="white" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                <div class="store-badge-text">
+                  <span class="store-badge-sub">Download on the</span>
+                  <span class="store-badge-main">App Store</span>
+                </div>
+              </a>
+              <span class="store-soon-badge">Coming Soon</span>
+            </div>
+
+            <!-- Google Play – coming soon -->
+            <div class="store-soon-wrap">
+              <a href="#" class="store-badge coming-soon" aria-label="Get it on Google Play" tabindex="-1">
+                <svg class="store-badge-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#EA4335" d="M3.18 23.76A2 2 0 0 1 2 22V2a2 2 0 0 1 1.18-1.76l11.65 11.65z"/>
+                  <path fill="#FBBC05" d="M20.32 10.6l-2.5-1.43-3 2.83 3 2.83 2.53-1.45a1.63 1.63 0 0 0 0-2.78z"/>
+                  <path fill="#4285F4" d="M3.18.24 14.83 11.89 11.82 14.7 3.18.24z" opacity=".8"/>
+                  <path fill="#34A853" d="M3.18 23.76l8.64-14.48 3 2.83-11.64 11.65z"/>
+                </svg>
+                <div class="store-badge-text">
+                  <span class="store-badge-sub">GET IT ON</span>
+                  <span class="store-badge-main">Google Play</span>
+                </div>
+              </a>
+              <span class="store-soon-badge">Coming Soon</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Mock Screens Gallery -->
+      <div class="sp-gallery-wrap">
+        <div class="sp-gallery" style="display:flex; gap:1.25rem; justify-content:center; flex-wrap:wrap; align-items:flex-start; padding:1rem 0;">
+
+          <!-- ===== SCREEN 1: Login ===== -->
+          <svg width="220" height="440" viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" style="border-radius:22px; flex-shrink:0; display:block;">
+            <rect width="220" height="440" rx="22" fill="#0c1a2e"/>
+            <!-- Status bar -->
+            <rect x="0" y="0" width="220" height="32" rx="22" fill="#0c1a2e"/>
+            <!-- App Icon center -->
+            <rect x="74" y="52" width="72" height="72" rx="18" fill="#0ea5e9" opacity="0.15" stroke="#0ea5e9" stroke-width="1.5"/>
+            <!-- box on icon -->
+            <rect x="93" y="78" width="34" height="24" rx="3" fill="#0ea5e9"/>
+            <polygon points="93,78 110,70 127,78 110,86" fill="#38bdf8"/>
+            <polyline points="101,90 107,96 119,82" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- App name -->
+            <text x="110" y="148" font-family="Arial Black, Arial" font-weight="900" font-size="20" fill="white" text-anchor="middle">PackTrack</text>
+            <text x="110" y="164" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle" letter-spacing="1.5">DELIVERY SYSTEM</text>
+            <!-- Username field -->
+            <rect x="20" y="190" width="180" height="42" rx="9" fill="#0f2540" stroke="#1e3a5f" stroke-width="1.5"/>
+            <text x="36" y="208" font-family="Arial" font-size="9" fill="#64748b">USERNAME</text>
+            <text x="36" y="224" font-family="Arial" font-size="12" fill="#94a3b8">courier@branch</text>
+            <!-- Password field -->
+            <rect x="20" y="242" width="180" height="42" rx="9" fill="#0f2540" stroke="#1e3a5f" stroke-width="1.5"/>
+            <text x="36" y="260" font-family="Arial" font-size="9" fill="#64748b">PASSWORD</text>
+            <text x="36" y="276" font-family="Arial" font-size="13" fill="#475569">••••••••</text>
+            <!-- Eye icon -->
+            <ellipse cx="191" cy="263" rx="8" ry="5.5" fill="none" stroke="#475569" stroke-width="1.5"/>
+            <circle cx="191" cy="263" r="2.5" fill="#475569"/>
+            <!-- Login button -->
+            <rect x="20" y="300" width="180" height="46" rx="10" fill="#0ea5e9"/>
+            <text x="110" y="328" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="white" text-anchor="middle">LOG IN</text>
+            <!-- Branch auto-assign note -->
+            <text x="110" y="374" font-family="Arial" font-size="9.5" fill="#475569" text-anchor="middle">You will be assigned to your branch</text>
+            <text x="110" y="388" font-family="Arial" font-size="9.5" fill="#475569" text-anchor="middle">automatically after login.</text>
+          </svg>
+
+          <!-- ===== SCREEN 2: Package List ===== -->
+          <svg width="220" height="440" viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" style="border-radius:22px; flex-shrink:0; display:block;">
+            <rect width="220" height="440" rx="22" fill="#0c1a2e"/>
+            <!-- Header -->
+            <rect x="0" y="0" width="220" height="58" rx="22" fill="#0f2540"/>
+            <rect x="0" y="36" width="220" height="22" fill="#0f2540"/>
+            <text x="16" y="26" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="white">My Packages</text>
+            <rect x="134" y="12" width="72" height="22" rx="11" fill="rgba(14,165,233,0.2)" stroke="#0ea5e9" stroke-width="1"/>
+            <text x="170" y="27" font-family="Arial" font-size="9.5" fill="#0ea5e9" text-anchor="middle">Branch: Cairo-01</text>
+            <!-- Pending badge -->
+            <text x="16" y="78" font-family="Arial" font-size="10" fill="#64748b">PENDING  </text>
+            <rect x="72" y="66" width="24" height="16" rx="8" fill="#0ea5e9"/>
+            <text x="84" y="78" font-family="Arial" font-weight="bold" font-size="9" fill="white" text-anchor="middle">5</text>
+            <!-- Package item 1 -->
+            <rect x="10" y="88" width="200" height="56" rx="10" fill="#0f2540" stroke="#1e3a5f" stroke-width="1"/>
+            <rect x="22" y="100" width="32" height="32" rx="7" fill="#0ea5e9" opacity="0.15"/>
+            <!-- box mini -->
+            <rect x="28" y="108" width="20" height="16" rx="2" fill="#0ea5e9"/>
+            <polygon points="28,108 38,103 48,108 38,113" fill="#38bdf8"/>
+            <text x="62" y="108" font-family="Arial" font-weight="bold" font-size="10.5" fill="white">PKG-2024-00194</text>
+            <text x="62" y="122" font-family="Arial" font-size="9" fill="#64748b">Receiver: Ahmed Hassan</text>
+            <text x="62" y="134" font-family="Arial" font-size="9" fill="#64748b">Dest: Nasr City, Cairo</text>
+            <rect x="162" y="100" width="40" height="18" rx="9" fill="rgba(234,179,8,0.15)" stroke="#ca8a04" stroke-width="1"/>
+            <text x="182" y="113" font-family="Arial" font-size="8" fill="#ca8a04" text-anchor="middle">Pending</text>
+            <!-- Package item 2 -->
+            <rect x="10" y="152" width="200" height="56" rx="10" fill="#0f2540" stroke="#1e3a5f" stroke-width="1"/>
+            <rect x="22" y="164" width="32" height="32" rx="7" fill="#0ea5e9" opacity="0.15"/>
+            <rect x="28" y="172" width="20" height="16" rx="2" fill="#0ea5e9"/>
+            <polygon points="28,172 38,167 48,172 38,177" fill="#38bdf8"/>
+            <text x="62" y="172" font-family="Arial" font-weight="bold" font-size="10.5" fill="white">PKG-2024-00195</text>
+            <text x="62" y="186" font-family="Arial" font-size="9" fill="#64748b">Receiver: Sara Mostafa</text>
+            <text x="62" y="198" font-family="Arial" font-size="9" fill="#64748b">Dest: Maadi, Cairo</text>
+            <rect x="162" y="164" width="40" height="18" rx="9" fill="rgba(234,179,8,0.15)" stroke="#ca8a04" stroke-width="1"/>
+            <text x="182" y="177" font-family="Arial" font-size="8" fill="#ca8a04" text-anchor="middle">Pending</text>
+            <!-- Package item 3 -->
+            <rect x="10" y="216" width="200" height="56" rx="10" fill="#0f2540" stroke="#1e3a5f" stroke-width="1"/>
+            <rect x="22" y="228" width="32" height="32" rx="7" fill="#0ea5e9" opacity="0.15"/>
+            <rect x="28" y="236" width="20" height="16" rx="2" fill="#0ea5e9"/>
+            <polygon points="28,236 38,231 48,236 38,241" fill="#38bdf8"/>
+            <text x="62" y="236" font-family="Arial" font-weight="bold" font-size="10.5" fill="white">PKG-2024-00196</text>
+            <text x="62" y="250" font-family="Arial" font-size="9" fill="#64748b">Receiver: Omar Khalil</text>
+            <text x="62" y="262" font-family="Arial" font-size="9" fill="#64748b">Dest: Heliopolis, Cairo</text>
+            <rect x="162" y="228" width="40" height="18" rx="9" fill="rgba(234,179,8,0.15)" stroke="#ca8a04" stroke-width="1"/>
+            <text x="182" y="241" font-family="Arial" font-size="8" fill="#ca8a04" text-anchor="middle">Pending</text>
+            <!-- Scan to pick up CTA -->
+            <rect x="10" y="392" width="200" height="42" rx="21" fill="#0ea5e9"/>
+            <text x="28" y="418" font-family="Arial" font-size="16" fill="white">⬛</text>
+            <text x="110" y="418" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="white" text-anchor="middle">Scan to Pick Up</text>
+          </svg>
+
+          <!-- ===== SCREEN 3: Scan / Pick-up ===== -->
+          <svg width="220" height="440" viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" style="border-radius:22px; flex-shrink:0; display:block;">
+            <rect width="220" height="440" rx="22" fill="#050d18"/>
+            <!-- Dark cam area -->
+            <rect x="0" y="0" width="220" height="310" rx="22" fill="#0a0f1a"/>
+            <rect x="0" y="288" width="220" height="22" fill="#0a0f1a"/>
+            <!-- Header -->
+            <text x="110" y="30" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="white" text-anchor="middle">Scan Package</text>
+            <!-- Viewfinder -->
+            <rect x="30" y="50" width="160" height="220" rx="4" fill="rgba(0,0,0,0.5)"/>
+            <!-- Scan line (sky blue) -->
+            <rect x="30" y="162" width="160" height="2" rx="1" fill="#0ea5e9" opacity="0.8"/>
+            <!-- Corner brackets -->
+            <rect x="34" y="54" width="24" height="3"  rx="1.5" fill="#0ea5e9"/>
+            <rect x="34" y="54" width="3"  height="24" rx="1.5" fill="#0ea5e9"/>
+            <rect x="162" y="54" width="24" height="3"  rx="1.5" fill="#0ea5e9"/>
+            <rect x="183" y="54" width="3"  height="24" rx="1.5" fill="#0ea5e9"/>
+            <rect x="34" y="263" width="24" height="3"  rx="1.5" fill="#0ea5e9"/>
+            <rect x="34" y="243" width="3"  height="24" rx="1.5" fill="#0ea5e9"/>
+            <rect x="162" y="263" width="24" height="3"  rx="1.5" fill="#0ea5e9"/>
+            <rect x="183" y="243" width="3"  height="24" rx="1.5" fill="#0ea5e9"/>
+            <!-- Barcode inside frame -->
+            <rect x="60" y="120" width="4"  height="50" rx="1" fill="white" opacity="0.75"/>
+            <rect x="68" y="120" width="2"  height="50" rx="1" fill="white" opacity="0.75"/>
+            <rect x="74" y="120" width="6"  height="50" rx="1" fill="white" opacity="0.75"/>
+            <rect x="84" y="120" width="3"  height="50" rx="1" fill="white" opacity="0.75"/>
+            <rect x="91" y="120" width="5"  height="50" rx="1" fill="white" opacity="0.75"/>
+            <rect x="100" y="120" width="2" height="50" rx="1" fill="white" opacity="0.75"/>
+            <rect x="106" y="120" width="7" height="50" rx="1" fill="white" opacity="0.75"/>
+            <rect x="117" y="120" width="4" height="50" rx="1" fill="white" opacity="0.75"/>
+            <rect x="125" y="120" width="3" height="50" rx="1" fill="white" opacity="0.75"/>
+            <rect x="132" y="120" width="6" height="50" rx="1" fill="white" opacity="0.75"/>
+            <rect x="142" y="120" width="2" height="50" rx="1" fill="white" opacity="0.75"/>
+            <rect x="148" y="120" width="4" height="50" rx="1" fill="white" opacity="0.75"/>
+            <text x="110" y="188" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.4)" text-anchor="middle">PKG-2024-00194</text>
+            <!-- Instruction -->
+            <text x="110" y="296" font-family="Arial" font-size="10.5" fill="#94a3b8" text-anchor="middle">Point camera at package barcode</text>
+            <!-- Bottom panel -->
+            <rect x="0" y="308" width="220" height="132" rx="0" fill="#0f2540"/>
+            <rect x="0" y="308" width="220" height="10" fill="#0f2540"/>
+            <!-- Detected package info -->
+            <text x="16" y="334" font-family="Arial" font-size="9" fill="#64748b">DETECTED</text>
+            <text x="16" y="352" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="white">PKG-2024-00194</text>
+            <text x="16" y="367" font-family="Arial" font-size="10" fill="#64748b">Ahmed Hassan · Nasr City</text>
+            <!-- Confirm pick-up button -->
+            <rect x="14" y="382" width="192" height="44" rx="10" fill="#0ea5e9"/>
+            <text x="110" y="410" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="white" text-anchor="middle">Confirm Pick-Up</text>
+          </svg>
+
+          <!-- ===== SCREEN 4: Mark as Delivered ===== -->
+          <svg width="220" height="440" viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" style="border-radius:22px; flex-shrink:0; display:block;">
+            <rect width="220" height="440" rx="22" fill="#0c1a2e"/>
+            <!-- Header -->
+            <rect x="0" y="0" width="220" height="58" rx="22" fill="#0f2540"/>
+            <rect x="0" y="36" width="220" height="22" fill="#0f2540"/>
+            <text x="110" y="28" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="white" text-anchor="middle">In Transit</text>
+            <!-- Package card -->
+            <rect x="10" y="70" width="200" height="96" rx="12" fill="#0f2540" stroke="#1e3a5f" stroke-width="1.5"/>
+            <text x="22" y="92" font-family="Arial" font-size="9" fill="#64748b">PACKAGE</text>
+            <text x="22" y="108" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="white">PKG-2024-00194</text>
+            <text x="22" y="124" font-family="Arial" font-size="10" fill="#94a3b8">Receiver: Ahmed Hassan</text>
+            <text x="22" y="138" font-family="Arial" font-size="10" fill="#94a3b8">Destination: Nasr City, Cairo</text>
+            <rect x="158" y="76" width="44" height="20" rx="10" fill="rgba(14,165,233,0.15)" stroke="#0ea5e9" stroke-width="1"/>
+            <text x="180" y="90" font-family="Arial" font-size="8" fill="#0ea5e9" text-anchor="middle">In Transit</text>
+            <!-- Timeline -->
+            <text x="22" y="190" font-family="Arial" font-size="9" fill="#64748b">DELIVERY STATUS</text>
+            <!-- Step 1: Picked up -->
+            <circle cx="30" cy="212" r="8" fill="#0ea5e9"/>
+            <text x="30" y="216" font-family="Arial" font-size="9" fill="white" text-anchor="middle">✓</text>
+            <line x1="30" y1="220" x2="30" y2="248" stroke="#1e3a5f" stroke-width="2" stroke-dasharray="4,3"/>
+            <text x="46" y="209" font-family="Arial" font-weight="bold" font-size="10" fill="white">Picked Up</text>
+            <text x="46" y="222" font-family="Arial" font-size="8.5" fill="#64748b">09:14 AM · Branch: Cairo-01</text>
+            <!-- Step 2: In Transit (active) -->
+            <circle cx="30" cy="256" r="8" fill="#0ea5e9" opacity="0.4" stroke="#0ea5e9" stroke-width="1.5"/>
+            <circle cx="30" cy="256" r="3.5" fill="#0ea5e9"/>
+            <line x1="30" y1="264" x2="30" y2="292" stroke="#1e3a5f" stroke-width="2" stroke-dasharray="4,3"/>
+            <text x="46" y="253" font-family="Arial" font-weight="bold" font-size="10" fill="white">In Transit</text>
+            <text x="46" y="266" font-family="Arial" font-size="8.5" fill="#64748b">On the way to destination</text>
+            <!-- Step 3: Delivered (pending) -->
+            <circle cx="30" cy="300" r="8" fill="none" stroke="#1e3a5f" stroke-width="1.5"/>
+            <text x="46" y="297" font-family="Arial" font-weight="bold" font-size="10" fill="#475569">Delivered</text>
+            <text x="46" y="310" font-family="Arial" font-size="8.5" fill="#334155">Awaiting confirmation</text>
+            <!-- Mark Delivered button -->
+            <rect x="14" y="340" width="192" height="46" rx="10" fill="#0ea5e9"/>
+            <text x="110" y="368" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="white" text-anchor="middle">Mark as Delivered</text>
+            <!-- Note -->
+            <text x="110" y="408" font-family="Arial" font-size="9.5" fill="#475569" text-anchor="middle">Receiver must approve delivery</text>
+            <text x="110" y="422" font-family="Arial" font-size="9.5" fill="#475569" text-anchor="middle">before the order is closed.</text>
+          </svg>
+
+          <!-- ===== SCREEN 5: Receiver Approval ===== -->
+          <svg width="220" height="440" viewBox="0 0 220 440" xmlns="http://www.w3.org/2000/svg" style="border-radius:22px; flex-shrink:0; display:block;">
+            <rect width="220" height="440" rx="22" fill="#0c1a2e"/>
+            <!-- Header -->
+            <rect x="0" y="0" width="220" height="58" rx="22" fill="#0f2540"/>
+            <rect x="0" y="36" width="220" height="22" fill="#0f2540"/>
+            <text x="110" y="28" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="white" text-anchor="middle">Approve Delivery</text>
+            <!-- Illustration: delivery icon -->
+            <circle cx="110" cy="112" r="42" fill="rgba(14,165,233,0.1)" stroke="rgba(14,165,233,0.3)" stroke-width="1.5"/>
+            <!-- box -->
+            <rect x="88" y="100" width="44" height="32" rx="4" fill="#0ea5e9"/>
+            <polygon points="88,100 110,90 132,100 110,110" fill="#38bdf8"/>
+            <!-- checkmark overlay -->
+            <circle cx="128" cy="130" r="12" fill="#0c1a2e" stroke="#0ea5e9" stroke-width="1.5"/>
+            <polyline points="121,130 126,135 135,124" fill="none" stroke="#0ea5e9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Greeting text -->
+            <text x="110" y="174" font-family="Arial Black, Arial" font-weight="900" font-size="14" fill="white" text-anchor="middle">Package Arrived!</text>
+            <text x="110" y="192" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">Please confirm you have received</text>
+            <text x="110" y="206" font-family="Arial" font-size="10" fill="#64748b" text-anchor="middle">the following package:</text>
+            <!-- Package summary -->
+            <rect x="18" y="220" width="184" height="64" rx="10" fill="#0f2540" stroke="#1e3a5f" stroke-width="1"/>
+            <text x="110" y="244" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="white" text-anchor="middle">PKG-2024-00194</text>
+            <text x="110" y="260" font-family="Arial" font-size="9.5" fill="#94a3b8" text-anchor="middle">Courier: Mostafa Ali</text>
+            <text x="110" y="275" font-family="Arial" font-size="9.5" fill="#94a3b8" text-anchor="middle">Branch: Cairo-01 · Today 10:42 AM</text>
+            <!-- Confirm receipt button -->
+            <rect x="14" y="308" width="192" height="46" rx="10" fill="#0ea5e9"/>
+            <text x="110" y="336" font-family="Arial Black, Arial" font-weight="900" font-size="13" fill="white" text-anchor="middle">Confirm Receipt ✓</text>
+            <!-- Dispute button -->
+            <rect x="14" y="364" width="192" height="42" rx="10" fill="none" stroke="#334155" stroke-width="1.5"/>
+            <text x="110" y="390" font-family="Arial" font-weight="bold" font-size="12" fill="#64748b" text-anchor="middle">Report an Issue</text>
+            <!-- Receiver label -->
+            <text x="110" y="428" font-family="Arial" font-size="9" fill="#334155" text-anchor="middle">Receiver: Ahmed Hassan</text>
+          </svg>
+
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="sp-body">
+
+        <!-- Introduction -->
+        <section class="sp-section">
+          <h2 class="sp-section-title">Introduction</h2>
+          <p>
+            Managing last-mile package delivery across multiple branches is riddled with accountability gaps —
+            packages get lost, deliveries go unconfirmed, and disputes arise with no paper trail to resolve them.
+            PackTrack was built to close these gaps end-to-end.
+          </p>
+          <p style="margin-top:1rem;">
+            Built with <strong style="color:var(--white);">Flutter</strong>, PackTrack is a cross-platform app used by
+            couriers and receivers alike. A courier logs in and is automatically assigned to their branch, scans each
+            package during pick-up, and marks it as delivered on arrival. The receiver at the destination then opens
+            the app and approves the delivery — creating a fully auditable, tamper-proof chain of custody from origin
+            to final acceptance.
+          </p>
+        </section>
+
+        <!-- Contributions -->
+        <section class="sp-section">
+          <h2 class="sp-section-title">Contributions</h2>
+          <ul class="sp-list">
+            <li>Built a <strong style="color:var(--white);">branch-aware authentication system</strong> that automatically assigns each courier to their designated branch upon login, restricting visibility to only their own pending packages.</li>
+            <li>Developed a <strong style="color:var(--white);">barcode-based package scanning flow</strong> for the pick-up step, tying each scan to the courier's account with a timestamped record.</li>
+            <li>Implemented a <strong style="color:var(--white);">multi-step delivery status tracker</strong> (Pending → Picked Up → In Transit → Delivered) with real-time state updates visible to both courier and receiver.</li>
+            <li>Built the <strong style="color:var(--white);">receiver approval screen</strong> — receivers must actively confirm receipt, creating a two-party handshake that closes the delivery and prevents disputes.</li>
+            <li>Designed a <strong style="color:var(--white);">dispute and issue-reporting flow</strong> allowing receivers to flag problems at the point of delivery rather than after the fact.</li>
+            <li>Engineered the entire UI/UX in Flutter, optimised for field use — large tap targets, high-contrast status indicators, and minimal steps to complete a delivery action.</li>
+          </ul>
+        </section>
+
+        <!-- Key Highlights -->
+        <section class="sp-section">
+          <h2 class="sp-section-title">Key Highlights</h2>
+          <div class="sp-highlights">
+
+            <div class="sp-highlight-card">
+              <i class="fas fa-qrcode"></i>
+              <p class="sp-highlight-title">Scan to Pick Up</p>
+              <p class="sp-highlight-desc">Couriers scan each package's barcode to confirm pick-up, creating a timestamped record tied to their account and branch.</p>
+            </div>
+
+            <div class="sp-highlight-card">
+              <i class="fas fa-route"></i>
+              <p class="sp-highlight-title">Live Status Tracking</p>
+              <p class="sp-highlight-desc">Every package moves through a clear multi-step lifecycle — Pending, Picked Up, In Transit, Delivered — with real-time updates.</p>
+            </div>
+
+            <div class="sp-highlight-card">
+              <i class="fas fa-user-check"></i>
+              <p class="sp-highlight-title">Receiver Approval</p>
+              <p class="sp-highlight-desc">Delivery is only closed when the receiver explicitly confirms receipt in the app — no unilateral marking of packages as delivered.</p>
+            </div>
+
+            <div class="sp-highlight-card">
+              <i class="fas fa-sitemap"></i>
+              <p class="sp-highlight-title">Branch Assignment</p>
+              <p class="sp-highlight-desc">Login automatically scopes each courier to their branch, ensuring they only see and act on packages relevant to their location.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="sp-section">
+          <h2 class="sp-section-title">Technologies Used</h2>
+          <table class="tech-table">
+            <thead>
+              <tr>
+                <th>Tool / Library</th>
+                <th>Used for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Dart</td><td>Primary programming language</td></tr>
+              <tr><td>Flutter</td><td>Cross-platform mobile framework (iOS &amp; Android)</td></tr>
+              <tr><td>BLoC</td><td>State management across delivery flows</td></tr>
+              <tr><td>mobile_scanner</td><td>Real-time barcode scanning for package pick-up</td></tr>
+              <tr><td>Dio</td><td>REST API communication with the backend</td></tr>
+              <tr><td>Hive / SharedPrefs</td><td>Local session and branch assignment persistence</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+      <!-- /sp-body -->
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span class="footer-logo">Abdelhamid Ramadan</span>
+      <p class="footer-text">© 2025 Abdelhamid Ramadan. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+    document.querySelectorAll('.mobile-link').forEach(l =>
+      l.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggle.classList.remove('active');
+      })
+    );
+  </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POS Hardware Integration on Android | Abdelhamid Ramadan</title>
+  <link rel="icon" type="image/png" href="images/profile.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="top-nav scrolled" id="topNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        Abdelhamid Ramadan <span class="nav-logo-role">Android Developer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html"    class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="blog.html"     class="nav-link active">Blog</a>
+        <a href="gear.html"     class="nav-link">Gear</a>
+        <a href="about.html"    class="nav-link">About</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    class="mobile-link">Home</a>
+    <a href="projects.html" class="mobile-link">Projects</a>
+    <a href="blog.html"     class="mobile-link">Blog</a>
+    <a href="gear.html"     class="mobile-link">Gear</a>
+    <a href="about.html"    class="mobile-link">About</a>
+  </div>
+
+  <!-- ===== ARTICLE ===== -->
+  <article class="post-article">
+    <div class="post-container">
+
+      <!-- Header -->
+      <header class="post-header" data-aos="fade-up">
+        <div class="post-tags">
+          <span class="post-tag">android</span>
+          <span class="post-tag">pos</span>
+          <span class="post-tag">integration</span>
+        </div>
+        <h1 class="post-title">Getting Started with POS Hardware Integration on Android</h1>
+        <div class="post-meta">
+          <span>APR 6, 2024</span>
+          <span class="post-meta-dot">•</span>
+          <span>5 MIN READ</span>
+        </div>
+      </header>
+
+      <!-- Cover Image -->
+      <div class="post-cover-wrap" data-aos="fade-up" data-aos-delay="50">
+        <img src="images/post-image1.jpg" alt="POS Hardware Integration" class="post-cover">
+      </div>
+
+      <!-- Body -->
+      <div class="post-body" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Table of Contents -->
+        <div class="post-toc">
+          <div class="post-toc-title">Table of Contents</div>
+          <ul>
+            <li><a href="#overview">🔌 Overview</a></li>
+            <li><a href="#prerequisites">📋 Prerequisites</a></li>
+            <li><a href="#serial-communication">📡 Serial Communication</a></li>
+            <li><a href="#receipt-printing">🧾 Receipt Printing</a></li>
+            <li><a href="#tips">💡 Tips & Gotchas</a></li>
+          </ul>
+        </div>
+
+        <!-- Overview -->
+        <h2 id="overview">Overview</h2>
+        <p>
+          Integrating Android applications with POS hardware is one of those tasks that sounds straightforward but hides a surprising amount of complexity. Between USB serial communication, vendor-specific SDKs, and the variety of Android OS versions running on POS terminals in the wild, there's a lot to navigate.
+        </p>
+        <p>
+          This guide covers the core concepts and practical steps I've learned from shipping POS integrations in production, with a focus on getting reliable communication between your Android app and the attached hardware peripherals.
+        </p>
+
+        <!-- Prerequisites -->
+        <h2 id="prerequisites">Prerequisites</h2>
+        <p>Before diving in, make sure you have:</p>
+        <ul>
+          <li>An Android development environment set up (Android Studio / VS Code with Flutter)</li>
+          <li>Access to the POS terminal's SDK or documentation from the hardware vendor</li>
+          <li>A physical device to test on — emulators won't cut it for hardware communication</li>
+          <li>Basic familiarity with Android permissions and USB communication</li>
+        </ul>
+
+        <!-- Serial Communication -->
+        <h2 id="serial-communication">Serial Communication</h2>
+        <p>
+          Most POS terminals expose their peripherals (card readers, receipt printers, barcode scanners) over a serial interface. On Android, you have two main approaches:
+        </p>
+        <ol>
+          <li><strong>USB Serial via USB Host API</strong> — works when the Android device acts as the USB host. You enumerate connected USB devices, find your device by vendor/product ID, and open a serial port.</li>
+          <li><strong>Vendor SDK</strong> — most POS manufacturers ship an SDK that wraps the serial communication behind a cleaner API. Always prefer this when available.</li>
+        </ol>
+        <p>
+          When working with the USB Host API directly, declare the required permission in your manifest and handle the permission request at runtime before attempting to open the connection.
+        </p>
+
+        <div class="post-code-block">
+          <div class="post-code-lang">AndroidManifest.xml</div>
+          <pre><code>&lt;uses-feature android:name="android.hardware.usb.host" /&gt;
+
+&lt;uses-permission android:name="android.permission.USB_PERMISSION" /&gt;</code></pre>
+        </div>
+
+        <!-- Receipt Printing -->
+        <h2 id="receipt-printing">Receipt Printing</h2>
+        <p>
+          Receipt printers in POS terminals typically understand ESC/POS commands — a set of escape sequences that control formatting, alignment, and paper cutting. Most vendor SDKs expose a higher-level print API, but understanding ESC/POS helps when debugging output issues.
+        </p>
+        <p>
+          Key things to handle reliably:
+        </p>
+        <ul>
+          <li>Check printer status before sending a job (paper out, cover open, etc.)</li>
+          <li>Queue print jobs and handle failures with user-facing feedback</li>
+          <li>Test with real receipt paper at different temperatures — thermal printing degrades on cheap paper</li>
+          <li>Never block the main thread during print operations; always use a background thread or coroutine</li>
+        </ul>
+
+        <!-- Tips -->
+        <h2 id="tips">Tips &amp; Gotchas</h2>
+        <p>
+          After shipping several POS integrations, these are the things I wish I'd known upfront:
+        </p>
+        <ul>
+          <li><strong>Device fragmentation is real.</strong> The same app may behave differently across POS terminal brands even when they claim Android compatibility. Always test on the exact hardware you're shipping on.</li>
+          <li><strong>USB permissions don't persist across reboots</strong> on some devices. Handle permission denial gracefully and re-request when the app relaunches.</li>
+          <li><strong>Use a connection watchdog.</strong> Serial connections can silently drop. Implement a heartbeat or reconnect logic so the app recovers automatically.</li>
+          <li><strong>Log everything during development.</strong> Hardware bugs are hard to reproduce. Detailed logs of bytes sent/received save hours of debugging.</li>
+        </ul>
+
+        <p>
+          POS integrations reward careful, defensive coding. Once you've shipped one, you'll have a solid mental model that makes every subsequent integration much faster.
+        </p>
+
+      </div>
+
+      <!-- Back link -->
+      <div class="post-back-wrap" data-aos="fade-up">
+        <a href="blog.html" class="post-back">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Back to Blog
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <span class="footer-logo">Abdelhamid Ramadan</span>
+      <p class="footer-text">© 2025 Abdelhamid Ramadan. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/AbdelhamidDash" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/abdelhamidr/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://mastodon.social/@AbdehamidDash" class="social-link" aria-label="Mastodon" target="_blank" rel="noopener noreferrer"><i class="fab fa-mastodon"></i></a>
+        <a href="mailto:abdelhamydRamadan@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 750, once: true, offset: 80 });
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggle.classList.remove('active');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('topNav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>
